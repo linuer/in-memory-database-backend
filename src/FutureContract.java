@@ -24,6 +24,7 @@ public class FutureContract {
         randomName();
         ContractID();
         endTime();
+        nowContractID += 1;
         deliveryState = 1;
     }
 

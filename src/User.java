@@ -9,8 +9,16 @@ public class User {
     private String gender;
     private String telphone;
     //    用户资金
-    private int fund;
     public static Long userId = (long) 0;
+    private float fund;
+
+    public float getFund() {
+        return fund;
+    }
+
+    public void setFund(float fund) {
+        this.fund = fund;
+    }
 
     public static Long getUserId() {
         return userId;
@@ -159,13 +167,7 @@ public class User {
         this.telphone = telphone;
     }
 
-    public int getFund() {
-        return fund;
-    }
 
-    public void setFund(int fund) {
-        this.fund = fund;
-    }
 
     private void generateId() {
         identity = UnrepeatRandom.generateRandomStr(10);
@@ -174,9 +176,9 @@ public class User {
 
     private void generateFund() {
         Random random = new Random();
-        fund = (int) (random.nextFloat() * 100000);
+        fund = (float) (random.nextFloat() * 100000);
         Random r2 = new Random();
-        fund *= (int) (r2.nextFloat() * 10);
+        fund *= (float) (r2.nextFloat() * 10);
     }
 
 

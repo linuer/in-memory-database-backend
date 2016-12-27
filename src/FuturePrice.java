@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class FuturePrice {
     private java.sql.Date tradeTime;
-    private static Long futureID;
+    private static Long futureID = (long) 0;
 
     public Long getFutureID() {
         return futureID;
@@ -31,7 +31,7 @@ public class FuturePrice {
     }
 
     public FuturePrice() {
-        futureID = (long) 0;
+        futureID += 1;
         increase = 0;
         BuildFuturePrice();
     }
@@ -63,7 +63,7 @@ public class FuturePrice {
         this.futurePrice = futurePrice;
     }
 
-    public void randPrice()  {
+    public void randPrice() {
         float price = getDefaultPrice();
         float num = (float) (Math.random());
         if (increase == 0) {
@@ -79,7 +79,6 @@ public class FuturePrice {
             tradeTime = new java.sql.Date(date1.getTime());
             System.out.println(price);
             setFuturePrice(price);
-            futureID += 1;
             queryFuturePrice(tradeTime, futureID, futurePrice);
         }
         increaseTimes();
@@ -93,7 +92,6 @@ public class FuturePrice {
             tradeTime = new java.sql.Date(date1.getTime());
             System.out.println(price);
             setFuturePrice(price);
-            futureID += 1;
             queryFuturePrice(tradeTime, futureID, futurePrice);
         }
     }
@@ -118,12 +116,9 @@ public class FuturePrice {
     }
 
     //访问数据库并且把价格写入进去
-    private void writePrice() {
-
-    }
-
-    private void queryFuturePrice(java.sql.Date tradeTime, Long futureID, float futurePrice)  {
-        Connection conn = getConn();
+    private void queryFuturePrice(java.sql.Date tradeTime, Long futureID, float futurePrice) {
+        ConnecetUtils connecetUtils = new ConnecetUtils();
+        Connection conn = ConnecetUtils.getConn();
         try {
             String sql = "INSERT INTO FUTURE_PRICE(TRADE_TIME, FUTURE_ID,FUTURE_PRICE) VALUES (?, ?, ?)";
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -137,18 +132,6 @@ public class FuturePrice {
             e.printStackTrace();
         }
     }
-    private static Connection getConn() {
-        String driver = "oracle.jdbc.driver.OracleDriver";
-        String url = "jdbc:oracle:thin:@//10.60.42.202:1521/pdborcl.gc.com";
-        String username = "C##APP";// 用户名
-        String password = "gcers";// 密码
-        Connection conn = null; // 创建数据库连接对象
-        try {
-            Class.forName(driver);
-            conn = DriverManager.getConnection(url, username, password);
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-        }
-        return conn;
-    }
+
+
 }

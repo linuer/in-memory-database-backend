@@ -3,7 +3,6 @@ import java.sql.*;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
 
 public class JDBCStatementCreateExample {
 
@@ -14,10 +13,15 @@ public class JDBCStatementCreateExample {
     private static final DateFormat dateFormat = new SimpleDateFormat(
             "yyyy/MM/dd HH:mm:ss");
 
-    public static void main(String[] argv) throws ParseException,SQLException {
-//        createDbUserTable();
-        FuturePriceThread futurePriceThread = new FuturePriceThread();
-        futurePriceThread.start();
+    public static void main(String[] argv) throws ParseException, SQLException {
+//        createFUTURE_PRICETable();
+//        FuturePriceThread futurePriceThread = new FuturePriceThread();
+//        futurePriceThread.start();
+        UserBehavior userBehavior =new UserBehavior();
+        userBehavior.setMaxFutureNum(1);
+        userBehavior.trade();
+//        FuturePriceThread futurePriceThread2 = new FuturePriceThread();
+//        futurePriceThread2.start();
 //        queryFutureContract();
 //        for (int i = 0; i < 10; i++){
 //            User user = new User();
@@ -36,14 +40,14 @@ public class JDBCStatementCreateExample {
     }
 
 
-
-    private static void createDbUserTable() throws SQLException {
+    private static void createFUTURE_PRICETable() throws SQLException {
         Connection dbConnection = null;
         Statement statement = null;
         String createTableSQL = "CREATE TABLE FUTURE_PRICE("
                 + "TRADE_TIME DATE, "
                 + "FUTURE_ID NUMBER(20), "
-                + "FUTURE_PRICE NUMBER(24)"
+                + "FUTURE_PRICE NUMBER(24),"
+                + "PRIMARY KEY (TRADE_TIME,FUTURE_ID) "
                 + ")";
         try {
             dbConnection = getDBConnection();
@@ -121,23 +125,10 @@ public class JDBCStatementCreateExample {
         return dbConnection;
     }
 
-    private static Connection getConn() {
-        String driver = "oracle.jdbc.driver.OracleDriver";
-        String url = "jdbc:oracle:thin:@//10.60.42.202:1521/pdborcl.gc.com";
-        String username = "C##APP";// 用户名
-        String password = "gcers";// 密码
-        Connection conn = null; // 创建数据库连接对象
-        try {
-            Class.forName(driver);
-            conn = DriverManager.getConnection(url, username, password);
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-        }
-        return conn;
-    }
 
     private static void queryFutureContract() throws ParseException {
-        Connection conn = getConn();
+        ConnecetUtils connecetUtils = new ConnecetUtils();
+        Connection conn = ConnecetUtils.getConn();
         try {
             String sql = "INSERT INTO FUTURECONTRACT (CONTRACT_ID, CONTRACT_NAME,FUTURE_DESCIRPTION,DELIVERY_STATE,CONTRACT) VALUES (?, ?, ?,?,?)";
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -158,5 +149,22 @@ public class JDBCStatementCreateExample {
     private static String getCurrentTimeStamp() {
         java.util.Date today = new java.util.Date();
         return dateFormat.format(today.getTime());
+    }
+
+    //删除表
+    public static void dropTable() {
+        Connection conn = null;
+        Statement stmt = null;
+        try {
+            ConnecetUtils connecetUtils = new ConnecetUtils();
+            conn = ConnecetUtils.getConn();
+            stmt = conn.createStatement();
+            String sql = "DROP TABLE FUTURE_PRICE ";
+            stmt.executeUpdate(sql);
+            System.out.println("Table  deleted in given database...");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 }
