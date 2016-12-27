@@ -1,30 +1,43 @@
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 /**
  * Created by 13987 on 2016/12/27.
  */
 public class Holder {
-    public static Long userId = (long) 0;
-    public static Long nowContractID = (long) 0;
+    private Long userId = (long) 0;
+    private Long nowContractID = (long) 0;
     //用户总共持有该期货的数量
     private int amount;
 
-    public Holder(int amount) {
-        this.amount = amount;
-    }
-
-    public static Long getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public static void setUserId(Long userId) {
-        Holder.userId = userId;
+    public Holder(Long userId, Long nowContractID) throws SQLException {
+        selectRecordsFromTable(userId, nowContractID);
+        this.userId = userId;
+        this.nowContractID = nowContractID;
     }
 
-    public static Long getNowContractID() {
+    public Holder(Long userId, Long nowContractID, int amount) {
+        this.userId = userId;
+        this.nowContractID = nowContractID;
+        this.amount = amount;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public Long getNowContractID() {
         return nowContractID;
     }
 
-    public static void setNowContractID(Long nowContractID) {
-        Holder.nowContractID = nowContractID;
+    public void setNowContractID(Long nowContractID) {
+        this.nowContractID = nowContractID;
     }
 
     public int getAmount() {
@@ -33,5 +46,38 @@ public class Holder {
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    public Holder() {
+    }
+
+
+    public void selectRecordsFromTable(Long userId, Long nowContractID) throws SQLException {
+        Connection dbConnection = null;
+        PreparedStatement preparedStatement = null;
+        String selectSQL = "SELECT * FROM HOLDER WHERE USER_ID = ? AND FUTURE_ID = ? ";
+        try {
+            ConnecetUtils connecetUtils = new ConnecetUtils();
+            dbConnection = ConnecetUtils.getConn();
+            preparedStatement = dbConnection.prepareStatement(selectSQL);
+            preparedStatement.setLong(1, userId);
+            preparedStatement.setLong(2, nowContractID);
+            // execute select SQL stetement
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int amount = rs.getInt("NUMBER");
+                System.out.println("AMOUNT : " + amount);
+                this.setAmount(amount);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            if (preparedStatement != null) {
+                preparedStatement.close();
+            }
+            if (dbConnection != null) {
+                dbConnection.close();
+            }
+        }
     }
 }

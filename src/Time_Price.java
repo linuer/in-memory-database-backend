@@ -6,6 +6,21 @@ import java.sql.Date;
 public class Time_Price {
     private java.sql.Date time;
     private float price;
+    private Long contractID;
+
+    public Long getContractID() {
+        return contractID;
+    }
+
+    public Time_Price(Date time, float price, Long contractID) {
+        this.time = time;
+        this.price = price;
+        this.contractID = contractID;
+    }
+
+    public void setContractID(Long contractID) {
+        this.contractID = contractID;
+    }
 
     public Time_Price() {
     }

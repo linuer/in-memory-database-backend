@@ -1,42 +1,36 @@
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
  * Created by 13987 on 2016/12/27.
  */
 public class TradeRecord {
-    public static Long userId = (long) 0;
-    public static Long nowContractID = (long) 0;
+    private Long userId = (long) 0;
+    private Long nowContractID = (long) 0;
     private float price;
     private int tradeState;
     private int type;
     private int amount;
     private Date time;
 
-    public TradeRecord(float price, int tradeState, int type, int amount, Date time) {
-        this.price = price;
-        this.tradeState = tradeState;
-        this.type = type;
-        this.amount = amount;
-        this.time = time;
-    }
-
-    public TradeRecord() {
-    }
-
-    public static Long getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public static void setUserId(Long userId) {
-        TradeRecord.userId = userId;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
-    public static Long getNowContractID() {
+    public Long getNowContractID() {
         return nowContractID;
     }
 
-    public static void setNowContractID(Long nowContractID) {
-        TradeRecord.nowContractID = nowContractID;
+    public void setNowContractID(Long nowContractID) {
+        this.nowContractID = nowContractID;
     }
 
     public float getPrice() {
@@ -67,6 +61,11 @@ public class TradeRecord {
         return amount;
     }
 
+    //需要从数据库中进行查询，根据2个ID，获得amount
+    public void selcetAmount(Long userId, Long nowContractID) {
+
+    }
+
     public void setAmount(int amount) {
         this.amount = amount;
     }
@@ -78,4 +77,6 @@ public class TradeRecord {
     public void setTime(Date time) {
         this.time = time;
     }
+
+
 }

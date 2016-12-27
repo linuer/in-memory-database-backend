@@ -14,12 +14,12 @@ public class JDBCStatementCreateExample {
             "yyyy/MM/dd HH:mm:ss");
 
     public static void main(String[] argv) throws ParseException, SQLException {
-//        createFUTURE_PRICETable();
+//        createHolderTable();
 //        FuturePriceThread futurePriceThread = new FuturePriceThread();
 //        futurePriceThread.start();
-        UserBehavior userBehavior =new UserBehavior();
-        userBehavior.setMaxFutureNum(1);
-        userBehavior.trade();
+//        UserBehavior userBehavior =new UserBehavior();
+//        userBehavior.setMaxFutureNum(1);
+//        userBehavior.trade();
 //        FuturePriceThread futurePriceThread2 = new FuturePriceThread();
 //        futurePriceThread2.start();
 //        queryFutureContract();
@@ -166,5 +166,65 @@ public class JDBCStatementCreateExample {
             e.printStackTrace();
         }
 
+    }
+
+    private static void createTradeRecordTable() throws SQLException {
+        Connection dbConnection = null;
+        Statement statement = null;
+        String createTableSQL = "CREATE TABLE TRADE_RECORD("
+                + "USER_ID  NUMBER(20),"
+                + "FUTURE_ID NUMBER(20), "
+                + "PRICE NUMBER(20),"
+                + "TRADESTATE NUMBER(5),"
+                + "TRADE_TYPE NUMBER(5),"
+                + "AMOUNT NUMBER(10),"
+                + "TRADE_TIME DATE,"
+                + "PRIMARY KEY (USER_ID,FUTURE_ID) "
+                + ")";
+        try {
+            dbConnection = getDBConnection();
+            statement = dbConnection.createStatement();
+            System.out.println(createTableSQL);
+            // execute the SQL stetement
+            statement.execute(createTableSQL);
+            System.out.println("Table \"TradeRecord\" is created!");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+            if (dbConnection != null) {
+                dbConnection.close();
+            }
+        }
+    }
+
+    private static void createHolderTable() throws SQLException {
+        Connection dbConnection = null;
+        Statement statement = null;
+        String createTableSQL = "CREATE TABLE HOLDER("
+                + "USER_ID  NUMBER(20),"
+                + "FUTURE_ID NUMBER(20), "
+                + "AMOUNT NUMBER(10),"
+                + "PRIMARY KEY (USER_ID,FUTURE_ID) "
+                + ")";
+        try {
+            dbConnection = getDBConnection();
+            statement = dbConnection.createStatement();
+            System.out.println(createTableSQL);
+            // execute the SQL stetement
+            statement.execute(createTableSQL);
+            System.out.println("Table \"Holder\" is created!");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+            if (dbConnection != null) {
+                dbConnection.close();
+            }
+        }
     }
 }

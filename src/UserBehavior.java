@@ -30,9 +30,48 @@ public class UserBehavior {
             //交易时间
             Random r3 = new Random();
             int times = 1 + (int) (r3.nextFloat() * 40);
-            selectRecordsFromTable(id, times);
-            for (int j = 0; j != times; j++) {
-
+            ArrayList<Time_Price> time_prices = selectRecordsFromTable(id, times);
+            //对于查询到的某一期货的list
+            for (int j = 0; j != time_prices.size(); j++) {
+                Time_Price time_price = time_prices.get(j);
+                //是买还是卖
+                Random r4 = new Random();
+                int type = r4.nextInt(2);
+                Date date = time_price.getTime();
+                float price = time_price.getPrice();
+                TradeRecord tradeRecord = new TradeRecord();
+                tradeRecord.setPrice(price);
+                tradeRecord.setTime(date);
+                tradeRecord.setType(type);
+                tradeRecord.setUserId(User.getUserId());
+                tradeRecord.setNowContractID(time_price.getContractID());
+                Random r5 = new Random();
+                //之前的数量
+                Holder holder = new Holder(User.getUserId(), time_price.getContractID());
+                //用户原来持有的amount
+                int oldAmount = holder.getAmount();
+                int amount = r5.nextInt(200);
+                float fee = amount * price;
+                //买
+                if (type == 0) {
+                    float nowFund = user.getFund();
+                    nowFund -= fee;
+                    if (nowFund > 0) {
+                        oldAmount += amount;
+                        tradeRecord.setAmount(oldAmount);
+                        tradeRecord.setTradeState(1);
+                        user.setFund(nowFund);
+                    } else {
+                        tradeRecord.setTradeState(0);
+                    }
+                }
+                //卖出
+                else {
+                    float nowFund = user.getFund();
+                    nowFund += fee;
+                    tradeRecord.setTradeState(1);
+                    user.setFund(nowFund);
+                }
             }
         }
     }
@@ -69,17 +108,18 @@ public class UserBehavior {
         ArrayList<Time_Price> time_prices = new ArrayList<>();
         Connection dbConnection = null;
         PreparedStatement preparedStatement = null;
+        int counter = 0;
         String selectSQL = "SELECT * FROM FUTURE_PRICE WHERE FUTURE_ID = ?";
         try {
             ConnecetUtils connecetUtils = new ConnecetUtils();
             dbConnection = ConnecetUtils.getConn();
             preparedStatement = dbConnection.prepareStatement(selectSQL);
-            preparedStatement.setInt(1, 1);
+            preparedStatement.setInt(1, id);
             // execute select SQL stetement
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 Date time = rs.getDate("TRADE_TIME");
-                int futureID = rs.getInt("FUTURE_ID");
+                Long futureID = rs.getLong("FUTURE_ID");
                 float futurePrice = rs.getFloat("FUTURE_PRICE");
                 System.out.println("TRADE_TIME : " + time.getTime());
                 System.out.println("FUTURE_ID : " + futureID);
@@ -87,7 +127,12 @@ public class UserBehavior {
                 Time_Price time_price = new Time_Price();
                 time_price.setPrice(futurePrice);
                 time_price.setTime(time);
+                time_price.setContractID(futureID);
                 time_prices.add(time_price);
+                counter += 1;
+                if (counter == times) {
+                    break;
+                }
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
