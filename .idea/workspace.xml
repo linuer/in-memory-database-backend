@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="900d6ca3-0d3f-46ab-b636-d7c9904aa2b3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ConnecetUtils.java" afterPath="$PROJECT_DIR$/src/ConnecetUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FutureContract.java" afterPath="$PROJECT_DIR$/src/FutureContract.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FuturePrice.java" afterPath="$PROJECT_DIR$/src/FuturePrice.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FuturePriceThread.java" afterPath="$PROJECT_DIR$/src/FuturePriceThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JDBCStatementCreateExample.java" afterPath="$PROJECT_DIR$/src/JDBCStatementCreateExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UnrepeatRandom.java" afterPath="$PROJECT_DIR$/src/UnrepeatRandom.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/User.java" afterPath="$PROJECT_DIR$/src/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBehavior.java" afterPath="$PROJECT_DIR$/src/UserBehavior.java" />
     </list>
     <ignored path="timeten.iws" />
@@ -40,28 +35,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="JDBCStatementCreateExample.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JDBCStatementCreateExample.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+            <state relative-caret-position="363">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#insertRecordIntoDbUserTable#0;class#JDBCStatementCreateExample#0" expanded="false" />
                 <element signature="method#getCurrentTimeStamp#0;class#JDBCStatementCreateExample#0" expanded="false" />
-                <marker date="1482921208447" expanded="true" signature="1312:1610" ph="CREATE TABLE... FUTURE_PRICE" />
-                <marker date="1482921208447" expanded="true" signature="2556:2695" ph="INSERT INTO DBUSER... " />
-                <marker date="1482921208447" expanded="true" signature="2556:2699" ph="INSERT INTO DBUSER... " />
-                <marker date="1482921208447" expanded="true" signature="2556:2782" ph="INSERT INTO DBUSER... " />
-                <marker date="1482921208447" expanded="true" signature="4214:4297" ph="insert into DBUSER... " />
-                <marker date="1482921208447" expanded="true" signature="4899:5005" ph="INSERT INTO USER_TABLE... " />
-                <marker date="1482921208447" expanded="true" signature="5981:6007" ph="DROP TABLE F... " />
-                <marker date="1482921208447" expanded="true" signature="6385:6533" ph="CREATE TABLE... TRADE_RECORD" />
-                <marker date="1482921208447" expanded="true" signature="6385:6745" ph="CREATE TABLE... TRADE_RECORD" />
-                <marker date="1482921208447" expanded="true" signature="6385:6907" ph="CREATE TABLE... FUTURE" />
-                <marker date="1482921208447" expanded="true" signature="7702:8108" ph="CREATE TABLE... USER_TABLE" />
-                <marker date="1482921208447" expanded="true" signature="8871:9169" ph="CREATE TABLE... HOLDER" />
-                <marker date="1482921208447" expanded="true" signature="9969:10325" ph="CREATE TABLE... HOLDER" />
+                <marker date="1482936495050" expanded="true" signature="1616:1914" ph="CREATE TABLE... FUTURE_PRICE" />
+                <marker date="1482936495050" expanded="true" signature="2860:2999" ph="INSERT INTO DBUSER... " />
+                <marker date="1482936495050" expanded="true" signature="2860:3003" ph="INSERT INTO DBUSER... " />
+                <marker date="1482936495050" expanded="true" signature="2860:3086" ph="INSERT INTO DBUSER... " />
+                <marker date="1482936495050" expanded="true" signature="4518:4601" ph="insert into DBUSER... " />
+                <marker date="1482936495050" expanded="true" signature="5203:5308" ph="INSERT INTO USER_TABLE... " />
+                <marker date="1482936495050" expanded="true" signature="6284:6310" ph="DROP TABLE F... " />
+                <marker date="1482936495050" expanded="true" signature="6688:6908" ph="CREATE TABLE... TRADE_RECORD" />
+                <marker date="1482936495050" expanded="true" signature="6688:7112" ph="CREATE TABLE... TRADE_RECORD" />
+                <marker date="1482936495050" expanded="true" signature="6688:7274" ph="CREATE TABLE... FUTURE" />
+                <marker date="1482936495050" expanded="true" signature="8069:8475" ph="CREATE TABLE... USER_TABLE" />
+                <marker date="1482936495050" expanded="true" signature="9238:9536" ph="CREATE TABLE... HOLDER" />
+                <marker date="1482936495050" expanded="true" signature="10336:10692" ph="CREATE TABLE... HOLDER" />
               </folding>
             </state>
           </provider>
@@ -70,8 +65,8 @@
       <file leaf-file-name="ConnecetUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ConnecetUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="297">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -80,38 +75,9 @@
       <file leaf-file-name="FuturePriceThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FuturePriceThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            <state relative-caret-position="63">
+              <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FutureContract.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FutureContract.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-495">
-              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FuturePrice.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FuturePrice.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="87" column="44" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#993#994#0" expanded="true" />
-                <element signature="e#1041#1042#0" expanded="true" />
-                <element signature="e#2837#2838#0" expanded="true" />
-                <element signature="e#2864#2865#0" expanded="true" />
-                <marker date="1482920765026" expanded="true" signature="3133:3210" ph="INSERT INTO FUTURECONTRACT... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -119,112 +85,45 @@
       <file leaf-file-name="UserBehavior.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UserBehavior.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="197" column="13" selection-start-line="197" selection-start-column="13" selection-end-line="197" selection-end-column="13" />
+            <state relative-caret-position="226">
+              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1482914996944" expanded="true" signature="3485:3575" ph="UPDATE HOLDE... " />
-                <marker date="1482914996944" expanded="true" signature="4187:4261" ph="UPDATE HOLDE... " />
-                <marker date="1482914996944" expanded="true" signature="4759:4878" ph="INSERT INTO TRADE_RECORD... " />
-                <marker date="1482914996944" expanded="true" signature="6066:6092" ph="SELECT TRADE... FUTURE_PRICE" />
-                <marker date="1482914996944" expanded="true" signature="6066:6112" ph="SELECT * FRO... FUTURE_PRICE" />
-                <marker date="1482914996944" expanded="true" signature="7798:7840" ph="SELECT * FRO... USER_TABLE" />
+                <marker date="1482938616328" expanded="true" signature="3958:4049" ph="UPDATE HOLDE... " />
+                <marker date="1482938616328" expanded="true" signature="4669:4729" ph="INSERT INTO HOLDER... " />
+                <marker date="1482938616328" expanded="true" signature="5341:5415" ph="UPDATE HOLDE... " />
+                <marker date="1482938616328" expanded="true" signature="5958:6077" ph="INSERT INTO TRADE_RECORD... " />
+                <marker date="1482938616328" expanded="true" signature="7266:7292" ph="SELECT TRADE... FUTURE_PRICE" />
+                <marker date="1482938616328" expanded="true" signature="7266:7312" ph="SELECT * FRO... FUTURE_PRICE" />
+                <marker date="1482938616328" expanded="true" signature="8999:9041" ph="SELECT * FRO... USER_TABLE" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TradeRecord.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TradeRecord.java">
+      <file leaf-file-name="Holder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Holder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            <state relative-caret-position="226">
+              <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
               <folding>
-                <element signature="e#472#473#0" expanded="false" />
-                <element signature="e#501#502#0" expanded="false" />
-                <element signature="e#543#544#0" expanded="false" />
-                <element signature="e#579#580#0" expanded="false" />
-                <element signature="e#617#618#0" expanded="false" />
-                <element signature="e#653#654#0" expanded="false" />
-                <element signature="e#709#710#0" expanded="false" />
-                <element signature="e#759#760#0" expanded="false" />
-                <element signature="e#790#791#0" expanded="false" />
-                <element signature="e#818#819#0" expanded="false" />
-                <element signature="e#859#860#0" expanded="false" />
-                <element signature="e#893#894#0" expanded="false" />
-                <element signature="e#927#928#0" expanded="false" />
-                <element signature="e#960#961#0" expanded="false" />
-                <element signature="e#1009#1010#0" expanded="false" />
-                <element signature="e#1053#1054#0" expanded="false" />
-                <element signature="e#1081#1082#0" expanded="false" />
-                <element signature="e#1108#1109#0" expanded="false" />
-                <element signature="e#1145#1146#0" expanded="false" />
-                <element signature="e#1177#1178#0" expanded="false" />
-                <element signature="e#1207#1208#0" expanded="false" />
-                <element signature="e#1236#1237#0" expanded="false" />
-                <element signature="e#1383#1384#0" expanded="false" />
-                <element signature="e#1419#1420#0" expanded="false" />
-                <element signature="e#1448#1449#0" expanded="false" />
-                <element signature="e#1475#1476#0" expanded="false" />
-                <element signature="e#1513#1514#0" expanded="false" />
-                <element signature="e#1545#1546#0" expanded="false" />
+                <element signature="e#1109#1110#0" expanded="true" />
+                <element signature="e#1145#1146#0" expanded="true" />
+                <marker date="1482848800499" expanded="true" signature="1392:1448" ph="SELECT * FRO... HOLDER" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/User.java">
+      <file leaf-file-name="Time_Price.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Time_Price.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="358">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
-                <element signature="e#581#582#0" expanded="false" />
-                <element signature="e#608#609#0" expanded="false" />
-                <element signature="e#647#648#0" expanded="false" />
-                <element signature="e#679#680#0" expanded="false" />
-                <element signature="e#717#718#0" expanded="false" />
-                <element signature="e#744#745#0" expanded="false" />
-                <element signature="e#791#792#0" expanded="false" />
-                <element signature="e#823#824#0" expanded="false" />
-                <element signature="e#866#867#0" expanded="false" />
-                <element signature="e#898#899#0" expanded="false" />
-                <element signature="e#955#956#0" expanded="false" />
-                <element signature="e#997#998#0" expanded="false" />
-                <element signature="e#1035#1036#0" expanded="false" />
-                <element signature="e#1062#1063#0" expanded="false" />
-                <element signature="e#1109#1110#0" expanded="false" />
-                <element signature="e#1141#1142#0" expanded="false" />
-                <element signature="e#1178#1179#0" expanded="false" />
-                <element signature="e#1204#1205#0" expanded="false" />
-                <element signature="e#1249#1250#0" expanded="false" />
-                <element signature="e#1279#1280#0" expanded="false" />
-                <element signature="e#1323#1324#0" expanded="false" />
-                <element signature="e#1354#1355#0" expanded="false" />
-                <element signature="e#1411#1412#0" expanded="false" />
-                <element signature="e#1451#1452#0" expanded="false" />
-                <element signature="e#1493#1494#0" expanded="false" />
-                <element signature="e#1524#1525#0" expanded="false" />
-                <element signature="e#1579#1580#0" expanded="false" />
-                <element signature="e#1619#1620#0" expanded="false" />
-                <element signature="e#2038#2039#0" expanded="false" />
-                <element signature="e#2110#2111#0" expanded="false" />
-                <element signature="e#4590#4591#0" expanded="false" />
-                <element signature="e#4621#4622#0" expanded="false" />
-                <element signature="e#4669#4670#0" expanded="false" />
-                <element signature="e#4709#4710#0" expanded="false" />
-                <element signature="e#4744#4745#0" expanded="false" />
-                <element signature="e#4775#4776#0" expanded="false" />
-                <element signature="e#4823#4824#0" expanded="false" />
-                <element signature="e#4863#4864#0" expanded="false" />
-                <element signature="e#4896#4897#0" expanded="false" />
-                <element signature="e#4925#4926#0" expanded="false" />
-                <element signature="e#4969#4970#0" expanded="false" />
-                <element signature="e#5005#5006#0" expanded="false" />
-                <element signature="e#5040#5041#0" expanded="false" />
-                <element signature="e#5071#5072#0" expanded="false" />
-                <element signature="e#5119#5120#0" expanded="false" />
-                <element signature="e#5159#5160#0" expanded="false" />
+                <element signature="e#673#674#0" expanded="true" />
+                <element signature="e#700#701#0" expanded="true" />
+                <element signature="e#829#830#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -233,8 +132,41 @@
       <file leaf-file-name="UnrepeatRandom.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UnrepeatRandom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1584">
+            <state relative-caret-position="459">
               <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TradeRecord.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TradeRecord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <element signature="e#1009#1010#0" expanded="true" />
+                <element signature="e#1053#1054#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TimeUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2346">
+              <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -271,10 +203,10 @@
         <option value="$PROJECT_DIR$/src/FutureContract.java" />
         <option value="$PROJECT_DIR$/src/UnrepeatRandom.java" />
         <option value="$PROJECT_DIR$/src/User.java" />
-        <option value="$PROJECT_DIR$/src/UserBehavior.java" />
-        <option value="$PROJECT_DIR$/src/FuturePriceThread.java" />
         <option value="$PROJECT_DIR$/src/FuturePrice.java" />
+        <option value="$PROJECT_DIR$/src/FuturePriceThread.java" />
         <option value="$PROJECT_DIR$/src/JDBCStatementCreateExample.java" />
+        <option value="$PROJECT_DIR$/src/UserBehavior.java" />
       </list>
     </option>
   </component>
@@ -344,7 +276,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -379,8 +310,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -867,12 +799,13 @@
       <workItem from="1482833625216" duration="15147000" />
       <workItem from="1482890681381" duration="5575000" />
       <workItem from="1482903362529" duration="11555000" />
-      <workItem from="1482919067559" duration="2699000" />
+      <workItem from="1482919067559" duration="5448000" />
+      <workItem from="1482925477129" duration="12776000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75049000" />
+    <option name="totallyTimeSpent" value="90574000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -885,7 +818,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938388" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -894,7 +827,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25890738" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24109264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -904,7 +837,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3456057" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3337292" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -929,13 +862,25 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java</url>
-          <line>26</line>
+          <url>file://$PROJECT_DIR$/src/UserBehavior.java</url>
+          <line>35</line>
           <properties />
-          <option name="timeStamp" value="93" />
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/UserBehavior.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/UserBehavior.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="137" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="94" />
+      <option name="time" value="140" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -953,12 +898,12 @@
             <element signature="e#244#245#0" expanded="false" />
             <element signature="e#458#459#0" expanded="false" />
             <element signature="e#502#503#0" expanded="false" />
-            <element signature="e#673#674#0" expanded="false" />
-            <element signature="e#700#701#0" expanded="false" />
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
             <element signature="e#738#739#0" expanded="false" />
             <element signature="e#770#771#0" expanded="false" />
             <element signature="e#801#802#0" expanded="false" />
-            <element signature="e#829#830#0" expanded="false" />
+            <element signature="e#829#830#0" expanded="true" />
             <element signature="e#870#871#0" expanded="false" />
             <element signature="e#904#905#0" expanded="false" />
           </folding>
@@ -969,54 +914,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#581#582#0" expanded="false" />
-            <element signature="e#608#609#0" expanded="false" />
-            <element signature="e#647#648#0" expanded="false" />
-            <element signature="e#679#680#0" expanded="false" />
-            <element signature="e#717#718#0" expanded="false" />
-            <element signature="e#744#745#0" expanded="false" />
-            <element signature="e#791#792#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <element signature="e#866#867#0" expanded="false" />
-            <element signature="e#898#899#0" expanded="false" />
-            <element signature="e#955#956#0" expanded="false" />
-            <element signature="e#997#998#0" expanded="false" />
-            <element signature="e#1035#1036#0" expanded="false" />
-            <element signature="e#1062#1063#0" expanded="false" />
-            <element signature="e#1109#1110#0" expanded="false" />
-            <element signature="e#1141#1142#0" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1204#1205#0" expanded="false" />
-            <element signature="e#1249#1250#0" expanded="false" />
-            <element signature="e#1279#1280#0" expanded="false" />
-            <element signature="e#1323#1324#0" expanded="false" />
-            <element signature="e#1354#1355#0" expanded="false" />
-            <element signature="e#1411#1412#0" expanded="false" />
-            <element signature="e#1451#1452#0" expanded="false" />
-            <element signature="e#1493#1494#0" expanded="false" />
-            <element signature="e#1524#1525#0" expanded="false" />
-            <element signature="e#1579#1580#0" expanded="false" />
-            <element signature="e#1619#1620#0" expanded="false" />
-            <element signature="e#2038#2039#0" expanded="false" />
-            <element signature="e#2110#2111#0" expanded="false" />
-            <element signature="e#4590#4591#0" expanded="false" />
-            <element signature="e#4621#4622#0" expanded="false" />
-            <element signature="e#4669#4670#0" expanded="false" />
-            <element signature="e#4709#4710#0" expanded="false" />
-            <element signature="e#4744#4745#0" expanded="false" />
-            <element signature="e#4775#4776#0" expanded="false" />
-            <element signature="e#4823#4824#0" expanded="false" />
-            <element signature="e#4863#4864#0" expanded="false" />
-            <element signature="e#4896#4897#0" expanded="false" />
-            <element signature="e#4925#4926#0" expanded="false" />
-            <element signature="e#4969#4970#0" expanded="false" />
-            <element signature="e#5005#5006#0" expanded="false" />
-            <element signature="e#5040#5041#0" expanded="false" />
-            <element signature="e#5071#5072#0" expanded="false" />
-            <element signature="e#5119#5120#0" expanded="false" />
-            <element signature="e#5159#5160#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,19 +926,19 @@
             <element signature="imports" expanded="true" />
             <element signature="method#insertRecordIntoDbUserTable#0;class#JDBCStatementCreateExample#0" expanded="false" />
             <element signature="method#getCurrentTimeStamp#0;class#JDBCStatementCreateExample#0" expanded="false" />
-            <marker date="1482921208447" expanded="true" signature="1312:1610" ph="CREATE TABLE... FUTURE_PRICE" />
-            <marker date="1482921208447" expanded="true" signature="2556:2695" ph="INSERT INTO DBUSER... " />
-            <marker date="1482921208447" expanded="true" signature="2556:2699" ph="INSERT INTO DBUSER... " />
-            <marker date="1482921208447" expanded="true" signature="2556:2782" ph="INSERT INTO DBUSER... " />
-            <marker date="1482921208447" expanded="true" signature="4214:4297" ph="insert into DBUSER... " />
-            <marker date="1482921208447" expanded="true" signature="4899:5005" ph="INSERT INTO USER_TABLE... " />
-            <marker date="1482921208447" expanded="true" signature="5981:6007" ph="DROP TABLE F... " />
-            <marker date="1482921208447" expanded="true" signature="6385:6533" ph="CREATE TABLE... TRADE_RECORD" />
-            <marker date="1482921208447" expanded="true" signature="6385:6745" ph="CREATE TABLE... TRADE_RECORD" />
-            <marker date="1482921208447" expanded="true" signature="6385:6907" ph="CREATE TABLE... FUTURE" />
-            <marker date="1482921208447" expanded="true" signature="7702:8108" ph="CREATE TABLE... USER_TABLE" />
-            <marker date="1482921208447" expanded="true" signature="8871:9169" ph="CREATE TABLE... HOLDER" />
-            <marker date="1482921208447" expanded="true" signature="9969:10325" ph="CREATE TABLE... HOLDER" />
+            <marker date="1482936495050" expanded="true" signature="1616:1914" ph="CREATE TABLE... FUTURE_PRICE" />
+            <marker date="1482936495050" expanded="true" signature="2860:2999" ph="INSERT INTO DBUSER... " />
+            <marker date="1482936495050" expanded="true" signature="2860:3003" ph="INSERT INTO DBUSER... " />
+            <marker date="1482936495050" expanded="true" signature="2860:3086" ph="INSERT INTO DBUSER... " />
+            <marker date="1482936495050" expanded="true" signature="4518:4601" ph="insert into DBUSER... " />
+            <marker date="1482936495050" expanded="true" signature="5203:5308" ph="INSERT INTO USER_TABLE... " />
+            <marker date="1482936495050" expanded="true" signature="6284:6310" ph="DROP TABLE F... " />
+            <marker date="1482936495050" expanded="true" signature="6688:6908" ph="CREATE TABLE... TRADE_RECORD" />
+            <marker date="1482936495050" expanded="true" signature="6688:7112" ph="CREATE TABLE... TRADE_RECORD" />
+            <marker date="1482936495050" expanded="true" signature="6688:7274" ph="CREATE TABLE... FUTURE" />
+            <marker date="1482936495050" expanded="true" signature="8069:8475" ph="CREATE TABLE... USER_TABLE" />
+            <marker date="1482936495050" expanded="true" signature="9238:9536" ph="CREATE TABLE... HOLDER" />
+            <marker date="1482936495050" expanded="true" signature="10336:10692" ph="CREATE TABLE... HOLDER" />
           </folding>
         </state>
       </provider>
@@ -1076,11 +974,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
             <element signature="e#2837#2838#0" expanded="true" />
             <element signature="e#2864#2865#0" expanded="true" />
-            <marker date="1482920765026" expanded="true" signature="3133:3210" ph="INSERT INTO FUTURECONTRACT... " />
+            <marker date="1482924896239" expanded="true" signature="3133:3210" ph="INSERT INTO FUTURECONTRACT... " />
           </folding>
         </state>
       </provider>
@@ -1097,54 +993,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3993">
           <caret line="171" column="18" selection-start-line="171" selection-start-column="18" selection-end-line="171" selection-end-column="18" />
-          <folding>
-            <element signature="e#581#582#0" expanded="false" />
-            <element signature="e#608#609#0" expanded="false" />
-            <element signature="e#647#648#0" expanded="false" />
-            <element signature="e#679#680#0" expanded="false" />
-            <element signature="e#717#718#0" expanded="false" />
-            <element signature="e#744#745#0" expanded="false" />
-            <element signature="e#791#792#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <element signature="e#866#867#0" expanded="false" />
-            <element signature="e#898#899#0" expanded="false" />
-            <element signature="e#955#956#0" expanded="false" />
-            <element signature="e#997#998#0" expanded="false" />
-            <element signature="e#1035#1036#0" expanded="false" />
-            <element signature="e#1062#1063#0" expanded="false" />
-            <element signature="e#1109#1110#0" expanded="false" />
-            <element signature="e#1141#1142#0" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1204#1205#0" expanded="false" />
-            <element signature="e#1249#1250#0" expanded="false" />
-            <element signature="e#1279#1280#0" expanded="false" />
-            <element signature="e#1323#1324#0" expanded="false" />
-            <element signature="e#1354#1355#0" expanded="false" />
-            <element signature="e#1411#1412#0" expanded="false" />
-            <element signature="e#1451#1452#0" expanded="false" />
-            <element signature="e#1493#1494#0" expanded="false" />
-            <element signature="e#1524#1525#0" expanded="false" />
-            <element signature="e#1579#1580#0" expanded="false" />
-            <element signature="e#1619#1620#0" expanded="false" />
-            <element signature="e#2038#2039#0" expanded="false" />
-            <element signature="e#2110#2111#0" expanded="false" />
-            <element signature="e#4590#4591#0" expanded="false" />
-            <element signature="e#4621#4622#0" expanded="false" />
-            <element signature="e#4669#4670#0" expanded="false" />
-            <element signature="e#4709#4710#0" expanded="false" />
-            <element signature="e#4744#4745#0" expanded="false" />
-            <element signature="e#4775#4776#0" expanded="false" />
-            <element signature="e#4823#4824#0" expanded="false" />
-            <element signature="e#4863#4864#0" expanded="false" />
-            <element signature="e#4896#4897#0" expanded="false" />
-            <element signature="e#4925#4926#0" expanded="false" />
-            <element signature="e#4969#4970#0" expanded="false" />
-            <element signature="e#5005#5006#0" expanded="false" />
-            <element signature="e#5040#5041#0" expanded="false" />
-            <element signature="e#5071#5072#0" expanded="false" />
-            <element signature="e#5119#5120#0" expanded="false" />
-            <element signature="e#5159#5160#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1172,19 +1021,19 @@
             <element signature="imports" expanded="true" />
             <element signature="method#insertRecordIntoDbUserTable#0;class#JDBCStatementCreateExample#0" expanded="false" />
             <element signature="method#getCurrentTimeStamp#0;class#JDBCStatementCreateExample#0" expanded="false" />
-            <marker date="1482921208447" expanded="true" signature="1312:1610" ph="CREATE TABLE... FUTURE_PRICE" />
-            <marker date="1482921208447" expanded="true" signature="2556:2695" ph="INSERT INTO DBUSER... " />
-            <marker date="1482921208447" expanded="true" signature="2556:2699" ph="INSERT INTO DBUSER... " />
-            <marker date="1482921208447" expanded="true" signature="2556:2782" ph="INSERT INTO DBUSER... " />
-            <marker date="1482921208447" expanded="true" signature="4214:4297" ph="insert into DBUSER... " />
-            <marker date="1482921208447" expanded="true" signature="4899:5005" ph="INSERT INTO USER_TABLE... " />
-            <marker date="1482921208447" expanded="true" signature="5981:6007" ph="DROP TABLE F... " />
-            <marker date="1482921208447" expanded="true" signature="6385:6533" ph="CREATE TABLE... TRADE_RECORD" />
-            <marker date="1482921208447" expanded="true" signature="6385:6745" ph="CREATE TABLE... TRADE_RECORD" />
-            <marker date="1482921208447" expanded="true" signature="6385:6907" ph="CREATE TABLE... FUTURE" />
-            <marker date="1482921208447" expanded="true" signature="7702:8108" ph="CREATE TABLE... USER_TABLE" />
-            <marker date="1482921208447" expanded="true" signature="8871:9169" ph="CREATE TABLE... HOLDER" />
-            <marker date="1482921208447" expanded="true" signature="9969:10325" ph="CREATE TABLE... HOLDER" />
+            <marker date="1482936495050" expanded="true" signature="1616:1914" ph="CREATE TABLE... FUTURE_PRICE" />
+            <marker date="1482936495050" expanded="true" signature="2860:2999" ph="INSERT INTO DBUSER... " />
+            <marker date="1482936495050" expanded="true" signature="2860:3003" ph="INSERT INTO DBUSER... " />
+            <marker date="1482936495050" expanded="true" signature="2860:3086" ph="INSERT INTO DBUSER... " />
+            <marker date="1482936495050" expanded="true" signature="4518:4601" ph="insert into DBUSER... " />
+            <marker date="1482936495050" expanded="true" signature="5203:5308" ph="INSERT INTO USER_TABLE... " />
+            <marker date="1482936495050" expanded="true" signature="6284:6310" ph="DROP TABLE F... " />
+            <marker date="1482936495050" expanded="true" signature="6688:6908" ph="CREATE TABLE... TRADE_RECORD" />
+            <marker date="1482936495050" expanded="true" signature="6688:7112" ph="CREATE TABLE... TRADE_RECORD" />
+            <marker date="1482936495050" expanded="true" signature="6688:7274" ph="CREATE TABLE... FUTURE" />
+            <marker date="1482936495050" expanded="true" signature="8069:8475" ph="CREATE TABLE... USER_TABLE" />
+            <marker date="1482936495050" expanded="true" signature="9238:9536" ph="CREATE TABLE... HOLDER" />
+            <marker date="1482936495050" expanded="true" signature="10336:10692" ph="CREATE TABLE... HOLDER" />
           </folding>
         </state>
       </provider>
@@ -1220,11 +1069,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
             <element signature="e#2837#2838#0" expanded="true" />
             <element signature="e#2864#2865#0" expanded="true" />
-            <marker date="1482920765026" expanded="true" signature="3133:3210" ph="INSERT INTO FUTURECONTRACT... " />
+            <marker date="1482924896239" expanded="true" signature="3133:3210" ph="INSERT INTO FUTURECONTRACT... " />
           </folding>
         </state>
       </provider>
@@ -1241,54 +1088,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3993">
           <caret line="171" column="18" selection-start-line="171" selection-start-column="18" selection-end-line="171" selection-end-column="18" />
-          <folding>
-            <element signature="e#581#582#0" expanded="false" />
-            <element signature="e#608#609#0" expanded="false" />
-            <element signature="e#647#648#0" expanded="false" />
-            <element signature="e#679#680#0" expanded="false" />
-            <element signature="e#717#718#0" expanded="false" />
-            <element signature="e#744#745#0" expanded="false" />
-            <element signature="e#791#792#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <element signature="e#866#867#0" expanded="false" />
-            <element signature="e#898#899#0" expanded="false" />
-            <element signature="e#955#956#0" expanded="false" />
-            <element signature="e#997#998#0" expanded="false" />
-            <element signature="e#1035#1036#0" expanded="false" />
-            <element signature="e#1062#1063#0" expanded="false" />
-            <element signature="e#1109#1110#0" expanded="false" />
-            <element signature="e#1141#1142#0" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1204#1205#0" expanded="false" />
-            <element signature="e#1249#1250#0" expanded="false" />
-            <element signature="e#1279#1280#0" expanded="false" />
-            <element signature="e#1323#1324#0" expanded="false" />
-            <element signature="e#1354#1355#0" expanded="false" />
-            <element signature="e#1411#1412#0" expanded="false" />
-            <element signature="e#1451#1452#0" expanded="false" />
-            <element signature="e#1493#1494#0" expanded="false" />
-            <element signature="e#1524#1525#0" expanded="false" />
-            <element signature="e#1579#1580#0" expanded="false" />
-            <element signature="e#1619#1620#0" expanded="false" />
-            <element signature="e#2038#2039#0" expanded="false" />
-            <element signature="e#2110#2111#0" expanded="false" />
-            <element signature="e#4590#4591#0" expanded="false" />
-            <element signature="e#4621#4622#0" expanded="false" />
-            <element signature="e#4669#4670#0" expanded="false" />
-            <element signature="e#4709#4710#0" expanded="false" />
-            <element signature="e#4744#4745#0" expanded="false" />
-            <element signature="e#4775#4776#0" expanded="false" />
-            <element signature="e#4823#4824#0" expanded="false" />
-            <element signature="e#4863#4864#0" expanded="false" />
-            <element signature="e#4896#4897#0" expanded="false" />
-            <element signature="e#4925#4926#0" expanded="false" />
-            <element signature="e#4969#4970#0" expanded="false" />
-            <element signature="e#5005#5006#0" expanded="false" />
-            <element signature="e#5040#5041#0" expanded="false" />
-            <element signature="e#5071#5072#0" expanded="false" />
-            <element signature="e#5119#5120#0" expanded="false" />
-            <element signature="e#5159#5160#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1325,11 +1125,9 @@
           <caret line="118" column="9" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
             <element signature="e#2837#2838#0" expanded="true" />
             <element signature="e#2864#2865#0" expanded="true" />
-            <marker date="1482920765026" expanded="true" signature="3133:3210" ph="INSERT INTO FUTURECONTRACT... " />
+            <marker date="1482924896239" expanded="true" signature="3133:3210" ph="INSERT INTO FUTURECONTRACT... " />
           </folding>
         </state>
       </provider>
@@ -1348,54 +1146,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding>
-            <element signature="e#581#582#0" expanded="false" />
-            <element signature="e#608#609#0" expanded="false" />
-            <element signature="e#647#648#0" expanded="false" />
-            <element signature="e#679#680#0" expanded="false" />
-            <element signature="e#717#718#0" expanded="false" />
-            <element signature="e#744#745#0" expanded="false" />
-            <element signature="e#791#792#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <element signature="e#866#867#0" expanded="false" />
-            <element signature="e#898#899#0" expanded="false" />
-            <element signature="e#955#956#0" expanded="false" />
-            <element signature="e#997#998#0" expanded="false" />
-            <element signature="e#1035#1036#0" expanded="false" />
-            <element signature="e#1062#1063#0" expanded="false" />
-            <element signature="e#1109#1110#0" expanded="false" />
-            <element signature="e#1141#1142#0" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1204#1205#0" expanded="false" />
-            <element signature="e#1249#1250#0" expanded="false" />
-            <element signature="e#1279#1280#0" expanded="false" />
-            <element signature="e#1323#1324#0" expanded="false" />
-            <element signature="e#1354#1355#0" expanded="false" />
-            <element signature="e#1411#1412#0" expanded="false" />
-            <element signature="e#1451#1452#0" expanded="false" />
-            <element signature="e#1493#1494#0" expanded="false" />
-            <element signature="e#1524#1525#0" expanded="false" />
-            <element signature="e#1579#1580#0" expanded="false" />
-            <element signature="e#1619#1620#0" expanded="false" />
-            <element signature="e#2038#2039#0" expanded="false" />
-            <element signature="e#2110#2111#0" expanded="false" />
-            <element signature="e#4590#4591#0" expanded="false" />
-            <element signature="e#4621#4622#0" expanded="false" />
-            <element signature="e#4669#4670#0" expanded="false" />
-            <element signature="e#4709#4710#0" expanded="false" />
-            <element signature="e#4744#4745#0" expanded="false" />
-            <element signature="e#4775#4776#0" expanded="false" />
-            <element signature="e#4823#4824#0" expanded="false" />
-            <element signature="e#4863#4864#0" expanded="false" />
-            <element signature="e#4896#4897#0" expanded="false" />
-            <element signature="e#4925#4926#0" expanded="false" />
-            <element signature="e#4969#4970#0" expanded="false" />
-            <element signature="e#5005#5006#0" expanded="false" />
-            <element signature="e#5040#5041#0" expanded="false" />
-            <element signature="e#5071#5072#0" expanded="false" />
-            <element signature="e#5119#5120#0" expanded="false" />
-            <element signature="e#5159#5160#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1432,11 +1183,9 @@
           <caret line="118" column="9" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
             <element signature="e#2837#2838#0" expanded="true" />
             <element signature="e#2864#2865#0" expanded="true" />
-            <marker date="1482920765026" expanded="true" signature="3133:3210" ph="INSERT INTO FUTURECONTRACT... " />
+            <marker date="1482924896239" expanded="true" signature="3133:3210" ph="INSERT INTO FUTURECONTRACT... " />
           </folding>
         </state>
       </provider>
@@ -1455,54 +1204,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding>
-            <element signature="e#581#582#0" expanded="false" />
-            <element signature="e#608#609#0" expanded="false" />
-            <element signature="e#647#648#0" expanded="false" />
-            <element signature="e#679#680#0" expanded="false" />
-            <element signature="e#717#718#0" expanded="false" />
-            <element signature="e#744#745#0" expanded="false" />
-            <element signature="e#791#792#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <element signature="e#866#867#0" expanded="false" />
-            <element signature="e#898#899#0" expanded="false" />
-            <element signature="e#955#956#0" expanded="false" />
-            <element signature="e#997#998#0" expanded="false" />
-            <element signature="e#1035#1036#0" expanded="false" />
-            <element signature="e#1062#1063#0" expanded="false" />
-            <element signature="e#1109#1110#0" expanded="false" />
-            <element signature="e#1141#1142#0" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1204#1205#0" expanded="false" />
-            <element signature="e#1249#1250#0" expanded="false" />
-            <element signature="e#1279#1280#0" expanded="false" />
-            <element signature="e#1323#1324#0" expanded="false" />
-            <element signature="e#1354#1355#0" expanded="false" />
-            <element signature="e#1411#1412#0" expanded="false" />
-            <element signature="e#1451#1452#0" expanded="false" />
-            <element signature="e#1493#1494#0" expanded="false" />
-            <element signature="e#1524#1525#0" expanded="false" />
-            <element signature="e#1579#1580#0" expanded="false" />
-            <element signature="e#1619#1620#0" expanded="false" />
-            <element signature="e#2038#2039#0" expanded="false" />
-            <element signature="e#2110#2111#0" expanded="false" />
-            <element signature="e#4590#4591#0" expanded="false" />
-            <element signature="e#4621#4622#0" expanded="false" />
-            <element signature="e#4669#4670#0" expanded="false" />
-            <element signature="e#4709#4710#0" expanded="false" />
-            <element signature="e#4744#4745#0" expanded="false" />
-            <element signature="e#4775#4776#0" expanded="false" />
-            <element signature="e#4823#4824#0" expanded="false" />
-            <element signature="e#4863#4864#0" expanded="false" />
-            <element signature="e#4896#4897#0" expanded="false" />
-            <element signature="e#4925#4926#0" expanded="false" />
-            <element signature="e#4969#4970#0" expanded="false" />
-            <element signature="e#5005#5006#0" expanded="false" />
-            <element signature="e#5040#5041#0" expanded="false" />
-            <element signature="e#5071#5072#0" expanded="false" />
-            <element signature="e#5119#5120#0" expanded="false" />
-            <element signature="e#5159#5160#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1529,13 +1231,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21054">
-          <caret line="695" column="29" selection-start-line="695" selection-start-column="29" selection-end-line="695" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/sql/DriverManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1551,57 +1246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimeUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Time_Price.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="20" />
-          <folding>
-            <element signature="e#211#212#0" expanded="false" />
-            <element signature="e#244#245#0" expanded="false" />
-            <element signature="e#458#459#0" expanded="false" />
-            <element signature="e#502#503#0" expanded="false" />
-            <element signature="e#673#674#0" expanded="false" />
-            <element signature="e#700#701#0" expanded="false" />
-            <element signature="e#738#739#0" expanded="false" />
-            <element signature="e#770#771#0" expanded="false" />
-            <element signature="e#801#802#0" expanded="false" />
-            <element signature="e#829#830#0" expanded="false" />
-            <element signature="e#870#871#0" expanded="false" />
-            <element signature="e#904#905#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Holder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
-          <folding>
-            <element signature="e#337#338#0" expanded="false" />
-            <element signature="e#366#367#0" expanded="false" />
-            <element signature="e#793#794#0" expanded="false" />
-            <element signature="e#829#830#0" expanded="false" />
-            <element signature="e#867#868#0" expanded="false" />
-            <element signature="e#903#904#0" expanded="false" />
-            <element signature="e#959#960#0" expanded="false" />
-            <element signature="e#1009#1010#0" expanded="false" />
-            <element signature="e#1039#1040#0" expanded="false" />
-            <element signature="e#1068#1069#0" expanded="false" />
-            <element signature="e#1109#1110#0" expanded="false" />
-            <element signature="e#1145#1146#0" expanded="false" />
-            <marker date="1482848800499" expanded="true" signature="1392:1448" ph="SELECT * FRO... HOLDER" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3597">
@@ -1613,133 +1257,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TradeRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="e#472#473#0" expanded="false" />
-            <element signature="e#501#502#0" expanded="false" />
-            <element signature="e#543#544#0" expanded="false" />
-            <element signature="e#579#580#0" expanded="false" />
-            <element signature="e#617#618#0" expanded="false" />
-            <element signature="e#653#654#0" expanded="false" />
-            <element signature="e#709#710#0" expanded="false" />
-            <element signature="e#759#760#0" expanded="false" />
-            <element signature="e#790#791#0" expanded="false" />
-            <element signature="e#818#819#0" expanded="false" />
-            <element signature="e#859#860#0" expanded="false" />
-            <element signature="e#893#894#0" expanded="false" />
-            <element signature="e#927#928#0" expanded="false" />
-            <element signature="e#960#961#0" expanded="false" />
-            <element signature="e#1009#1010#0" expanded="false" />
-            <element signature="e#1053#1054#0" expanded="false" />
-            <element signature="e#1081#1082#0" expanded="false" />
-            <element signature="e#1108#1109#0" expanded="false" />
-            <element signature="e#1145#1146#0" expanded="false" />
-            <element signature="e#1177#1178#0" expanded="false" />
-            <element signature="e#1207#1208#0" expanded="false" />
-            <element signature="e#1236#1237#0" expanded="false" />
-            <element signature="e#1383#1384#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1448#1449#0" expanded="false" />
-            <element signature="e#1475#1476#0" expanded="false" />
-            <element signature="e#1513#1514#0" expanded="false" />
-            <element signature="e#1545#1546#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UnrepeatRandom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="e#581#582#0" expanded="false" />
-            <element signature="e#608#609#0" expanded="false" />
-            <element signature="e#647#648#0" expanded="false" />
-            <element signature="e#679#680#0" expanded="false" />
-            <element signature="e#717#718#0" expanded="false" />
-            <element signature="e#744#745#0" expanded="false" />
-            <element signature="e#791#792#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-            <element signature="e#866#867#0" expanded="false" />
-            <element signature="e#898#899#0" expanded="false" />
-            <element signature="e#955#956#0" expanded="false" />
-            <element signature="e#997#998#0" expanded="false" />
-            <element signature="e#1035#1036#0" expanded="false" />
-            <element signature="e#1062#1063#0" expanded="false" />
-            <element signature="e#1109#1110#0" expanded="false" />
-            <element signature="e#1141#1142#0" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1204#1205#0" expanded="false" />
-            <element signature="e#1249#1250#0" expanded="false" />
-            <element signature="e#1279#1280#0" expanded="false" />
-            <element signature="e#1323#1324#0" expanded="false" />
-            <element signature="e#1354#1355#0" expanded="false" />
-            <element signature="e#1411#1412#0" expanded="false" />
-            <element signature="e#1451#1452#0" expanded="false" />
-            <element signature="e#1493#1494#0" expanded="false" />
-            <element signature="e#1524#1525#0" expanded="false" />
-            <element signature="e#1579#1580#0" expanded="false" />
-            <element signature="e#1619#1620#0" expanded="false" />
-            <element signature="e#2038#2039#0" expanded="false" />
-            <element signature="e#2110#2111#0" expanded="false" />
-            <element signature="e#4590#4591#0" expanded="false" />
-            <element signature="e#4621#4622#0" expanded="false" />
-            <element signature="e#4669#4670#0" expanded="false" />
-            <element signature="e#4709#4710#0" expanded="false" />
-            <element signature="e#4744#4745#0" expanded="false" />
-            <element signature="e#4775#4776#0" expanded="false" />
-            <element signature="e#4823#4824#0" expanded="false" />
-            <element signature="e#4863#4864#0" expanded="false" />
-            <element signature="e#4896#4897#0" expanded="false" />
-            <element signature="e#4925#4926#0" expanded="false" />
-            <element signature="e#4969#4970#0" expanded="false" />
-            <element signature="e#5005#5006#0" expanded="false" />
-            <element signature="e#5040#5041#0" expanded="false" />
-            <element signature="e#5071#5072#0" expanded="false" />
-            <element signature="e#5119#5120#0" expanded="false" />
-            <element signature="e#5159#5160#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserBehavior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="197" column="13" selection-start-line="197" selection-start-column="13" selection-end-line="197" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1482914996944" expanded="true" signature="3485:3575" ph="UPDATE HOLDE... " />
-            <marker date="1482914996944" expanded="true" signature="4187:4261" ph="UPDATE HOLDE... " />
-            <marker date="1482914996944" expanded="true" signature="4759:4878" ph="INSERT INTO TRADE_RECORD... " />
-            <marker date="1482914996944" expanded="true" signature="6066:6092" ph="SELECT TRADE... FUTURE_PRICE" />
-            <marker date="1482914996944" expanded="true" signature="6066:6112" ph="SELECT * FRO... FUTURE_PRICE" />
-            <marker date="1482914996944" expanded="true" signature="7798:7840" ph="SELECT * FRO... USER_TABLE" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConnecetUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FutureContract.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-495">
+        <state relative-caret-position="297">
           <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1747,58 +1267,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/net/SocketInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="742" column="16" selection-start-line="742" selection-start-column="16" selection-end-line="742" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FuturePrice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="87" column="44" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
+        <state relative-caret-position="-1287">
+          <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
             <element signature="e#2837#2838#0" expanded="true" />
             <element signature="e#2864#2865#0" expanded="true" />
-            <marker date="1482920765026" expanded="true" signature="3133:3210" ph="INSERT INTO FUTURECONTRACT... " />
+            <marker date="1482924896239" expanded="true" signature="3133:3210" ph="INSERT INTO FUTURECONTRACT... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FuturePriceThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        <state relative-caret-position="63">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/net/SocketInputStream.java">
+    <entry file="file://$PROJECT_DIR$/src/ConnecetUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+        <state relative-caret-position="297">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UnrepeatRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2346">
+          <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        <state relative-caret-position="363">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#insertRecordIntoDbUserTable#0;class#JDBCStatementCreateExample#0" expanded="false" />
             <element signature="method#getCurrentTimeStamp#0;class#JDBCStatementCreateExample#0" expanded="false" />
-            <marker date="1482921208447" expanded="true" signature="1312:1610" ph="CREATE TABLE... FUTURE_PRICE" />
-            <marker date="1482921208447" expanded="true" signature="2556:2695" ph="INSERT INTO DBUSER... " />
-            <marker date="1482921208447" expanded="true" signature="2556:2699" ph="INSERT INTO DBUSER... " />
-            <marker date="1482921208447" expanded="true" signature="2556:2782" ph="INSERT INTO DBUSER... " />
-            <marker date="1482921208447" expanded="true" signature="4214:4297" ph="insert into DBUSER... " />
-            <marker date="1482921208447" expanded="true" signature="4899:5005" ph="INSERT INTO USER_TABLE... " />
-            <marker date="1482921208447" expanded="true" signature="5981:6007" ph="DROP TABLE F... " />
-            <marker date="1482921208447" expanded="true" signature="6385:6533" ph="CREATE TABLE... TRADE_RECORD" />
-            <marker date="1482921208447" expanded="true" signature="6385:6745" ph="CREATE TABLE... TRADE_RECORD" />
-            <marker date="1482921208447" expanded="true" signature="6385:6907" ph="CREATE TABLE... FUTURE" />
-            <marker date="1482921208447" expanded="true" signature="7702:8108" ph="CREATE TABLE... USER_TABLE" />
-            <marker date="1482921208447" expanded="true" signature="8871:9169" ph="CREATE TABLE... HOLDER" />
-            <marker date="1482921208447" expanded="true" signature="9969:10325" ph="CREATE TABLE... HOLDER" />
+            <marker date="1482936495050" expanded="true" signature="1616:1914" ph="CREATE TABLE... FUTURE_PRICE" />
+            <marker date="1482936495050" expanded="true" signature="2860:2999" ph="INSERT INTO DBUSER... " />
+            <marker date="1482936495050" expanded="true" signature="2860:3003" ph="INSERT INTO DBUSER... " />
+            <marker date="1482936495050" expanded="true" signature="2860:3086" ph="INSERT INTO DBUSER... " />
+            <marker date="1482936495050" expanded="true" signature="4518:4601" ph="insert into DBUSER... " />
+            <marker date="1482936495050" expanded="true" signature="5203:5308" ph="INSERT INTO USER_TABLE... " />
+            <marker date="1482936495050" expanded="true" signature="6284:6310" ph="DROP TABLE F... " />
+            <marker date="1482936495050" expanded="true" signature="6688:6908" ph="CREATE TABLE... TRADE_RECORD" />
+            <marker date="1482936495050" expanded="true" signature="6688:7112" ph="CREATE TABLE... TRADE_RECORD" />
+            <marker date="1482936495050" expanded="true" signature="6688:7274" ph="CREATE TABLE... FUTURE" />
+            <marker date="1482936495050" expanded="true" signature="8069:8475" ph="CREATE TABLE... USER_TABLE" />
+            <marker date="1482936495050" expanded="true" signature="9238:9536" ph="CREATE TABLE... HOLDER" />
+            <marker date="1482936495050" expanded="true" signature="10336:10692" ph="CREATE TABLE... HOLDER" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Time_Price.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#829#830#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TradeRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#1009#1010#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1482938616328" expanded="true" signature="3958:4049" ph="UPDATE HOLDE... " />
+            <marker date="1482938616328" expanded="true" signature="4669:4729" ph="INSERT INTO HOLDER... " />
+            <marker date="1482938616328" expanded="true" signature="5341:5415" ph="UPDATE HOLDE... " />
+            <marker date="1482938616328" expanded="true" signature="5958:6077" ph="INSERT INTO TRADE_RECORD... " />
+            <marker date="1482938616328" expanded="true" signature="7266:7292" ph="SELECT TRADE... FUTURE_PRICE" />
+            <marker date="1482938616328" expanded="true" signature="7266:7312" ph="SELECT * FRO... FUTURE_PRICE" />
+            <marker date="1482938616328" expanded="true" signature="8999:9041" ph="SELECT * FRO... USER_TABLE" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Holder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+          <folding>
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1145#1146#0" expanded="true" />
+            <marker date="1482848800499" expanded="true" signature="1392:1448" ph="SELECT * FRO... HOLDER" />
           </folding>
         </state>
       </provider>

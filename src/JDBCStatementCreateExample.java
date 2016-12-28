@@ -3,6 +3,7 @@ import java.sql.*;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Random;
 
 public class JDBCStatementCreateExample {
 
@@ -20,12 +21,20 @@ public class JDBCStatementCreateExample {
 //        createTradeRecordTable();
 //        createHolderTable();
 //        createFUTURE_PRICETable();
-            FuturePriceThread futurePriceThread = new FuturePriceThread();
-            Long id = (long) 3;
-            futurePriceThread.run(id);
-        FuturePriceThread futurePriceThread2 = new FuturePriceThread();
-        Long id2 = (long) 4;
-        futurePriceThread2.run(id2);
+//        for (int i = 3; i != 100; i++) {
+//            FuturePriceThread futurePriceThread = new FuturePriceThread((long) i);
+//            futurePriceThread.start();
+//        }
+//        for (int i = 0; i != 1000; i++) {
+//            User user =new User();
+//            user.generateAll();
+//            insertUser(user);
+//        }
+        UserBehavior userBehavior = new UserBehavior();
+        userBehavior.setMaxFutureNum(94);
+        Random random = new Random();
+        Long userId = (long) random.nextInt(1000);
+        userBehavior.trade(userId);
     }
 
 
@@ -137,7 +146,7 @@ public class JDBCStatementCreateExample {
         ConnecetUtils connecetUtils = new ConnecetUtils();
         Connection conn = ConnecetUtils.getConn();
         try {
-            String sql = "INSERT INTO USER_TABLE ( USER_NAME,USER_IDENTITY,GENDER,Telephone,User_password,FUND) VALUES (?,?,?,?,?,?)";
+            String sql = "INSERT INTO USER_TABLE (USER_NAME,USER_IDENTITY,GENDER,Telephone,User_password,FUND) VALUES (?,?,?,?,?,?)";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, user.getUserName());
             ps.setString(2, user.getIdentity());
@@ -179,6 +188,7 @@ public class JDBCStatementCreateExample {
         Connection dbConnection = null;
         Statement statement = null;
         String createTableSQL = "CREATE TABLE TRADE_RECORD("
+                + "record_ID  NUMBER(20) GENERATED ALWAYS AS IDENTITY,"
                 + "USER_ID  NUMBER(20),"
                 + "FUTURE_ID NUMBER(20), "
                 + "PRICE NUMBER(10),"
@@ -186,7 +196,7 @@ public class JDBCStatementCreateExample {
                 + "TRADE_TYPE NUMBER(5),"
                 + "AMOUNT NUMBER(10),"
                 + "TRADE_TIME DATE,"
-                + "PRIMARY KEY (USER_ID,FUTURE_ID), "
+                + "PRIMARY KEY (record_ID), "
                 + "FOREIGN KEY (USER_ID) REFERENCES USER_TABLE, "
                 + "FOREIGN KEY (FUTURE_ID) REFERENCES FUTURE_CONTRACT "
                 + ")";
