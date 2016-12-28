@@ -7,37 +7,25 @@ import java.text.SimpleDateFormat;
 public class JDBCStatementCreateExample {
 
     private static final String DB_DRIVER = "oracle.jdbc.driver.OracleDriver";
-    private static final String DB_CONNECTION = "jdbc:oracle:thin:@//10.60.42.202:1521/pdborcl.gc.com";
-    private static final String DB_USER = "C##APP";
-    private static final String DB_PASSWORD = "gcers";
+    private static final String DB_CONNECTION = "jdbc:oracle:thin:@//10.60.42.202:1521/timespdb";
+    private static final String DB_USER = "C##TIMESTEN";
+    private static final String DB_PASSWORD = "googlecamp";
     private static final DateFormat dateFormat = new SimpleDateFormat(
             "yyyy/MM/dd HH:mm:ss");
 
     public static void main(String[] argv) throws ParseException, SQLException {
+//        dropTable();
 //        createUserTable();
+//        createFutureContractTable();
+//        createTradeRecordTable();
 //        createHolderTable();
-//        FuturePriceThread futurePriceThread = new FuturePriceThread();
-//        futurePriceThread.start();
-//        UserBehavior userBehavior =new UserBehavior();
-//        userBehavior.setMaxFutureNum(1);
-//        userBehavior.trade();
-//        FuturePriceThread futurePriceThread2 = new FuturePriceThread();
-//        futurePriceThread2.start();
-//        queryFutureContract();
-//        for (int i = 0; i < 10; i++){
-//            User user = new User();
-//            System.out.println(user.getFund());
-//            System.out.println(user.getIdentity());
-//            System.out.println(user.getGender());
-//            System.out.println(user.getTelphone());
-//            System.out.println(user.getUserId());
-//            System.out.println(user.getUserName());
-//        }
-//        try {
-//            queryFutureContract();
-//        } catch (Exception e) {
-//            System.out.println(e.getMessage());
-//        }
+//        createFUTURE_PRICETable();
+            FuturePriceThread futurePriceThread = new FuturePriceThread();
+            Long id = (long) 3;
+            futurePriceThread.run(id);
+        FuturePriceThread futurePriceThread2 = new FuturePriceThread();
+        Long id2 = (long) 4;
+        futurePriceThread2.run(id2);
     }
 
 
@@ -46,9 +34,10 @@ public class JDBCStatementCreateExample {
         Statement statement = null;
         String createTableSQL = "CREATE TABLE FUTURE_PRICE("
                 + "TRADE_TIME DATE, "
-                + "FUTURE_ID NUMBER(20), "
-                + "FUTURE_PRICE NUMBER(24),"
-                + "PRIMARY KEY (TRADE_TIME,FUTURE_ID) "
+                + "FUTURE_ID NUMBER(20),"
+                + "FUTURE_PRICE NUMBER,"
+                + "PRIMARY KEY (TRADE_TIME,FUTURE_ID), "
+                + "FOREIGN KEY (FUTURE_ID) REFERENCES FUTURE_CONTRACT "
                 + ")";
         try {
             dbConnection = getDBConnection();
@@ -127,18 +116,35 @@ public class JDBCStatementCreateExample {
     }
 
 
-    private static void queryFutureContract() throws ParseException {
+    private static void insertFutureContract(FutureContract futureContract) throws ParseException {
         ConnecetUtils connecetUtils = new ConnecetUtils();
         Connection conn = ConnecetUtils.getConn();
         try {
-            String sql = "INSERT INTO FUTURECONTRACT (CONTRACT_ID, CONTRACT_NAME,FUTURE_DESCIRPTION,DELIVERY_STATE,CONTRACT) VALUES (?, ?, ?,?,?)";
+            String sql = "INSERT INTO FUTURE_CONTRACT ( CONTRACT_NAME,DELIVERY_STATE,CONTRACT) VALUES (?,?,?)";
             PreparedStatement ps = conn.prepareStatement(sql);
-            FutureContract futureContract = new FutureContract();
-            ps.setInt(1, 6);
-            ps.setString(2, futureContract.getContractName());
-            ps.setString(3, futureContract.getContractName());
-            ps.setInt(4, 1);
-            ps.setDate(5, futureContract.getContract());
+            ps.setString(1, futureContract.getContractName());
+            ps.setInt(2, 1);
+            ps.setDate(3, futureContract.getContract());
+            ps.executeUpdate();
+            ps.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void insertUser(User user) throws ParseException {
+        ConnecetUtils connecetUtils = new ConnecetUtils();
+        Connection conn = ConnecetUtils.getConn();
+        try {
+            String sql = "INSERT INTO USER_TABLE ( USER_NAME,USER_IDENTITY,GENDER,Telephone,User_password,FUND) VALUES (?,?,?,?,?,?)";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, user.getUserName());
+            ps.setString(2, user.getIdentity());
+            ps.setString(3, user.getGender());
+            ps.setString(4, user.getTelphone());
+            ps.setString(5, user.getPwd());
+            ps.setFloat(6, user.getFund());
             ps.executeUpdate();
             ps.close();
             conn.close();
@@ -160,7 +166,7 @@ public class JDBCStatementCreateExample {
             ConnecetUtils connecetUtils = new ConnecetUtils();
             conn = ConnecetUtils.getConn();
             stmt = conn.createStatement();
-            String sql = "DROP TABLE FUTURE_PRICE ";
+            String sql = "DROP TABLE FUTURE_CONTRACT ";
             stmt.executeUpdate(sql);
             System.out.println("Table  deleted in given database...");
         } catch (SQLException e) {
@@ -175,12 +181,14 @@ public class JDBCStatementCreateExample {
         String createTableSQL = "CREATE TABLE TRADE_RECORD("
                 + "USER_ID  NUMBER(20),"
                 + "FUTURE_ID NUMBER(20), "
-                + "PRICE NUMBER(20),"
+                + "PRICE NUMBER(10),"
                 + "TRADESTATE NUMBER(5),"
                 + "TRADE_TYPE NUMBER(5),"
                 + "AMOUNT NUMBER(10),"
                 + "TRADE_TIME DATE,"
-                + "PRIMARY KEY (USER_ID,FUTURE_ID) "
+                + "PRIMARY KEY (USER_ID,FUTURE_ID), "
+                + "FOREIGN KEY (USER_ID) REFERENCES USER_TABLE, "
+                + "FOREIGN KEY (FUTURE_ID) REFERENCES FUTURE_CONTRACT "
                 + ")";
         try {
             dbConnection = getDBConnection();
@@ -205,12 +213,13 @@ public class JDBCStatementCreateExample {
         Connection dbConnection = null;
         Statement statement = null;
         String createTableSQL = "CREATE TABLE USER_TABLE("
-                + "USER_ID  NUMBER(20),"
+                + "USER_ID  NUMBER(20) GENERATED ALWAYS AS IDENTITY,"
                 + "USER_NAME VARCHAR(20), "
                 + "USER_IDENTITY CHAR(18),"
                 + "GENDER CHAR(8),"
-                + "TELPHONE CHAR(20),"
-                + "FUND NUMBER(10),"
+                + "Telephone CHAR(20),"
+                + "User_password CHAR(20),"
+                + "FUND NUMBER(12,2),"
                 + "PRIMARY KEY (USER_ID) "
                 + ")";
         try {
@@ -230,6 +239,36 @@ public class JDBCStatementCreateExample {
             }
         }
     }
+
+    private static void createFutureContractTable() throws SQLException {
+        Connection dbConnection = null;
+        Statement statement = null;
+        String createTableSQL = "CREATE TABLE FUTURE_CONTRACT("
+                + "FUTURE_ID  NUMBER(20) GENERATED ALWAYS AS IDENTITY,"
+                + "CONTRACT_NAME VARCHAR2(20), "
+                + "DELIVERY_STATE NUMBER(2),"
+                + "CONTRACT DATE,"
+                + "PRIMARY KEY (FUTURE_ID) "
+                + ")";
+        try {
+            dbConnection = getDBConnection();
+            statement = dbConnection.createStatement();
+            System.out.println(createTableSQL);
+            // execute the SQL stetement
+            statement.execute(createTableSQL);
+            System.out.println("Table \"FutureContract\" is created!");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+            if (dbConnection != null) {
+                dbConnection.close();
+            }
+        }
+    }
+
     private static void createHolderTable() throws SQLException {
         Connection dbConnection = null;
         Statement statement = null;
@@ -237,7 +276,9 @@ public class JDBCStatementCreateExample {
                 + "USER_ID  NUMBER(20),"
                 + "FUTURE_ID NUMBER(20), "
                 + "AMOUNT NUMBER(10),"
-                + "PRIMARY KEY (USER_ID,FUTURE_ID) "
+                + "PRIMARY KEY (USER_ID,FUTURE_ID),"
+                + "FOREIGN KEY (USER_ID) REFERENCES USER_TABLE, "
+                + "FOREIGN KEY (FUTURE_ID) REFERENCES FUTURE_CONTRACT "
                 + ")";
         try {
             dbConnection = getDBConnection();

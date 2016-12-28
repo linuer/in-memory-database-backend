@@ -9,8 +9,25 @@ public class User {
     private String gender;
     private String telphone;
     //    用户资金
-    public static Long userId = (long) 0;
     private float fund;
+    private String pwd;
+    private Long userId;
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
 
     public float getFund() {
         return fund;
@@ -18,14 +35,6 @@ public class User {
 
     public void setFund(float fund) {
         this.fund = fund;
-    }
-
-    public static Long getUserId() {
-        return userId;
-    }
-
-    public static void setUserId(Long userId) {
-        User.userId = userId;
     }
 
     public static String getBase() {
@@ -77,11 +86,21 @@ public class User {
     }
 
     public User() {
-        userId += 1;
+    }
+
+    public void generateAll() {
         getTel();
         getChineseName();
         generateFund();
         generateId();
+        generatePwd();
+    }
+
+    private void generatePwd() {
+        Random random = new Random();
+        int num = random.nextInt(8);
+        num += 5;
+        pwd = UnrepeatRandom.generateRandomStr2(num);
     }
 
     private static int getNum(int start, int end) {
@@ -168,7 +187,6 @@ public class User {
     }
 
 
-
     private void generateId() {
         identity = UnrepeatRandom.generateRandomStr(10);
         identity += UnrepeatRandom.generateRandomStr(8);
@@ -180,6 +198,5 @@ public class User {
         Random r2 = new Random();
         fund *= (float) (r2.nextFloat() * 10);
     }
-
 
 }

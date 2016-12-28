@@ -9,12 +9,9 @@ import java.util.Random;
  * Created by 13987 on 2016/12/24.
  */
 public class FutureContract {
-    public static Long nowContractID = (long) 0;
     //PK主码
     private String contractName;
     private String endDay;
-    //期货相关描述
-    private String futureDescirption;
     //是否还能交易
     private int deliveryState;
     //期货截止期限,精确到天
@@ -22,23 +19,15 @@ public class FutureContract {
 
     public FutureContract() throws ParseException {
         randomName();
-        ContractID();
         endTime();
-        nowContractID += 1;
         deliveryState = 1;
     }
 
-    public static Long getNowContractID() {
-        return nowContractID;
-    }
 
     private void contractState() {
         deliveryState = 1;
     }
 
-    public static void setNowContractID(Long nowContractID) {
-        FutureContract.nowContractID = nowContractID;
-    }
 
     public String getContractName() {
         return contractName;
@@ -48,13 +37,6 @@ public class FutureContract {
         this.contractName = contractName;
     }
 
-    public String getFutureDescirption() {
-        return futureDescirption;
-    }
-
-    public void setFutureDescirption(String futureDescirption) {
-        this.futureDescirption = futureDescirption;
-    }
 
     public int getDeliveryState() {
         return deliveryState;
@@ -99,9 +81,6 @@ public class FutureContract {
 //        return str1;
     }
 
-    private void ContractID() {
-        nowContractID += 1;
-    }
 
     private Date endTime() throws ParseException {
         Random r1 = new Random();
@@ -123,9 +102,7 @@ public class FutureContract {
         java.sql.Date date2 = new java.sql.Date(date1.getTime());
         contract = date2;
         return date2;
-//        java.sql.Timestamp b = new java.sql.Timestamp(date.getTime());
-//        this.contract = b.toString();
-//        return b.toString();
+
     }
 
 }

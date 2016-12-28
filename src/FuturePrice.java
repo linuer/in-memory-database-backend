@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class FuturePrice {
     private java.sql.Date tradeTime;
-    private static Long futureID = (long) 0;
+    private Long futureID = (long) 3;
 
     public Long getFutureID() {
         return futureID;
@@ -28,6 +28,12 @@ public class FuturePrice {
 
     public void setIncrease(int increase) {
         this.increase = increase;
+    }
+
+    public FuturePrice(Long futureID) {
+        this.futureID = futureID;
+        increase = 0;
+        BuildFuturePrice();
     }
 
     public FuturePrice() {

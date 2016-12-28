@@ -12,7 +12,6 @@ public class UserBehavior {
     private int maxFutureNum;
     private java.sql.Date tradeTime;
 
-
     //买卖期货
     public void trade() throws SQLException {
         //创建一出一个用户
@@ -42,11 +41,11 @@ public class UserBehavior {
                 tradeRecord.setPrice(price);
                 tradeRecord.setTime(date);
                 tradeRecord.setType(type);
-                tradeRecord.setUserId(User.getUserId());
+                tradeRecord.setUserId(user.getUserId());
                 tradeRecord.setNowContractID(time_price.getContractID());
                 Random r5 = new Random();
                 //之前的数量
-                Holder holder = new Holder(User.getUserId(), time_price.getContractID());
+                Holder holder = new Holder(user.getUserId(), time_price.getContractID());
                 //只有当买/卖成功的时候，才更新holder里面的数值
                 //用户原来持有的amount
                 int oldAmount = holder.getAmount();
@@ -201,4 +200,37 @@ public class UserBehavior {
         return time_prices;
     }
 
+    //从数据库中根据Id，查询出一个User
+    private User getUser(Long id) throws SQLException {
+        Connection dbConnection = null;
+        PreparedStatement preparedStatement = null;
+        String selectSQL = "SELECT * FROM USER_TABLE WHERE USER_ID = ?";
+        User user = new User();
+        try {
+            ConnecetUtils connecetUtils = new ConnecetUtils();
+            dbConnection = ConnecetUtils.getConn();
+            preparedStatement = dbConnection.prepareStatement(selectSQL);
+            preparedStatement.setLong(1, id);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                user.setUserId(id);
+                user.setUserName(rs.getString("USER_NAME"));
+                user.setGender(rs.getString("GENDER"));
+                user.setFund(rs.getFloat("FUND"));
+                user.setIdentity(rs.getString("USER_IDENTITY"));
+                user.setPwd(rs.getString("User_password"));
+                user.setTelphone(rs.getString("Telephone"));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            if (preparedStatement != null) {
+                preparedStatement.close();
+            }
+            if (dbConnection != null) {
+                dbConnection.close();
+            }
+        }
+        return user;
+    }
 }
