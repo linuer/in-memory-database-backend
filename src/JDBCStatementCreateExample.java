@@ -14,6 +14,7 @@ public class JDBCStatementCreateExample {
             "yyyy/MM/dd HH:mm:ss");
 
     public static void main(String[] argv) throws ParseException, SQLException {
+//        createUserTable();
 //        createHolderTable();
 //        FuturePriceThread futurePriceThread = new FuturePriceThread();
 //        futurePriceThread.start();
@@ -200,6 +201,35 @@ public class JDBCStatementCreateExample {
         }
     }
 
+    private static void createUserTable() throws SQLException {
+        Connection dbConnection = null;
+        Statement statement = null;
+        String createTableSQL = "CREATE TABLE USER_TABLE("
+                + "USER_ID  NUMBER(20),"
+                + "USER_NAME VARCHAR(20), "
+                + "USER_IDENTITY CHAR(18),"
+                + "GENDER CHAR(8),"
+                + "TELPHONE CHAR(20),"
+                + "FUND NUMBER(10),"
+                + "PRIMARY KEY (USER_ID) "
+                + ")";
+        try {
+            dbConnection = getDBConnection();
+            statement = dbConnection.createStatement();
+            System.out.println(createTableSQL);
+            statement.execute(createTableSQL);
+            System.out.println("Table \"User_Table\" is created!");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+            if (dbConnection != null) {
+                dbConnection.close();
+            }
+        }
+    }
     private static void createHolderTable() throws SQLException {
         Connection dbConnection = null;
         Statement statement = null;

@@ -18,7 +18,6 @@ public class UserBehavior {
         //创建一出一个用户
         //这个用户的ID，已经递增过了
         User user = new User();
-        float money = user.getFund();
         Random r1 = new Random();
         //不同期货尝试交易的次数
         int tradeTryTimes = 1 + (int) (r1.nextFloat() * 12);
@@ -48,18 +47,20 @@ public class UserBehavior {
                 Random r5 = new Random();
                 //之前的数量
                 Holder holder = new Holder(User.getUserId(), time_price.getContractID());
+                //只有当买/卖成功的时候，才更新holder里面的数值
                 //用户原来持有的amount
                 int oldAmount = holder.getAmount();
                 int amount = r5.nextInt(200);
+                tradeRecord.setAmount(amount);
                 float fee = amount * price;
                 //买
                 if (type == 0) {
                     float nowFund = user.getFund();
+                    int nowAmount = oldAmount + amount;
                     nowFund -= fee;
                     if (nowFund > 0) {
-                        oldAmount += amount;
-                        tradeRecord.setAmount(oldAmount);
                         tradeRecord.setTradeState(1);
+                        holder.setAmount(nowAmount);
                         user.setFund(nowFund);
                     } else {
                         tradeRecord.setTradeState(0);
@@ -68,16 +69,80 @@ public class UserBehavior {
                 //卖出
                 else {
                     float nowFund = user.getFund();
-                    nowFund += fee;
-                    tradeRecord.setTradeState(1);
-                    user.setFund(nowFund);
+                    int nowAmount = oldAmount - amount;
+                    if (nowAmount > 0) {
+                        nowFund += fee;
+                        tradeRecord.setTradeState(1);
+                        holder.setAmount(nowAmount);
+                        user.setFund(nowFund);
+                    } else {
+                        tradeRecord.setTradeState(0);
+                    }
                 }
+                //写回数据库
+                saveTradeRecord(tradeRecord);
+                updateHolderTabel(holder);
+                updateUserTabel(user);
             }
         }
     }
 
-    //卖出期货
-    public void sail() {
+    //Holder表更新
+    private void updateHolderTabel(Holder holder) {
+        ConnecetUtils connecetUtils = new ConnecetUtils();
+        Connection conn = ConnecetUtils.getConn();
+        try {
+            String updateTableSQL = "UPDATE HOLDER SET AMOUNT = ? "
+                    + " WHERE USER_ID = ? AND FUTURE_ID = ?";
+            PreparedStatement ps = conn.prepareStatement(updateTableSQL);
+            ps.setInt(1, holder.getAmount());
+            ps.setLong(2, holder.getUserId());
+            ps.setLong(3, holder.getNowContractID());
+            ps.executeUpdate();
+            ps.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //User表更新
+    private void updateUserTabel(User user) {
+        ConnecetUtils connecetUtils = new ConnecetUtils();
+        Connection conn = ConnecetUtils.getConn();
+        try {
+            String updateTableSQL = "UPDATE USER_TABLE SET FUND = ? "
+                    + " WHERE USER_ID = ?";
+            PreparedStatement ps = conn.prepareStatement(updateTableSQL);
+            ps.setFloat(1, user.getFund());
+            ps.executeUpdate();
+            ps.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void saveTradeRecord(TradeRecord tradeRecord) {
+        ConnecetUtils connecetUtils = new ConnecetUtils();
+        Connection conn = ConnecetUtils.getConn();
+        try {
+            String sql = "INSERT INTO TRADE_RECORD(USER_ID, FUTURE_ID,PRICE,TRADESTATE,TRADE_TYPE,AMOUNT,TRADE_TIME) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setLong(1, tradeRecord.getUserId());
+            ps.setLong(2, tradeRecord.getNowContractID());
+            ps.setFloat(3, tradeRecord.getPrice());
+            ps.setInt(4, tradeRecord.getTradeState());
+            ps.setInt(5, tradeRecord.getType());
+            ps.setInt(6, tradeRecord.getAmount());
+            Date date = new java.sql.Date(tradeRecord.getTime().getTime());
+            ps.setDate(7, date);
+            ps.executeUpdate();
+            ps.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -89,17 +154,6 @@ public class UserBehavior {
         this.maxFutureNum = maxFutureNum;
     }
 
-    //检测fund是否还可以买入
-    private boolean checkFund() {
-        boolean checkReasult = false;
-        return checkReasult;
-    }
-
-    //检测数量是否可以卖出
-    private boolean checkAmount() {
-        boolean checkReasult = false;
-        return checkReasult;
-    }
     //更新用户资金
     //更新fund数值
 
