@@ -1,8 +1,14 @@
+import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created by 13987 on 2016/12/26.
  */
 public class FuturePriceThread extends Thread {
-    private Long futureId = (long)3;
+    private Long futureId = (long) 1;
 
     public FuturePriceThread(Long futureId) {
         this.futureId = futureId;
@@ -10,14 +16,23 @@ public class FuturePriceThread extends Thread {
 
     @Override
     public void run() {
+//        DateFormat dateFormat1 = new SimpleDateFormat("yyyy-MM-dd HH");
+        DateFormat dateFormat2 = new SimpleDateFormat("yyyy-MM-dd");
+        Integer year = 2016;
+        Integer month = 12;
+        Integer day = 1;
+        Integer day2 = 31;
+        Integer hour1 = 10;
+        Integer hour2 = 14;
+        java.lang.String str = year.toString() + "-" + month.toString() + "-" + day.toString();
+        java.lang.String str2 = year.toString() + "-" + month.toString() + "-" + day2.toString();
         FuturePrice futurePrice = new FuturePrice(futureId);
-        while (true) {
-            futurePrice.randPrice();
-            try {
-                sleep(10000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        try {
+            Date myDate1 = dateFormat2.parse(str);
+            Date myDate2 = dateFormat2.parse(str2);
+            futurePrice.generateTime(myDate1, myDate2);
+        } catch (ParseException | SQLException e) {
+            e.printStackTrace();
         }
     }
 }

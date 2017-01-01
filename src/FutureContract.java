@@ -18,8 +18,8 @@ public class FutureContract {
     private java.sql.Date contract;
 
     public FutureContract() throws ParseException {
-        randomName();
         endTime();
+        randomName();
         deliveryState = 1;
     }
 
@@ -75,7 +75,7 @@ public class FutureContract {
         String str1 = String.valueOf(keyBoard1);
         String str2 = String.valueOf(keyBoard2);
         str1 += str2;
-        str1 += endTime();
+        str1 += contract;
         str1 = str1.substring(0, 12);
         this.contractName = str1;
 //        return str1;

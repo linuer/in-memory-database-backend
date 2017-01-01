@@ -57,8 +57,7 @@ public class Holder {
         PreparedStatement preparedStatement = null;
         String selectSQL = "SELECT * FROM HOLDER WHERE USER_ID = ? AND FUTURE_ID = ? ";
         try {
-            ConnecetUtils connecetUtils = new ConnecetUtils();
-            dbConnection = ConnecetUtils.getConn();
+            dbConnection = JDBCStatementCreateExample.pds.getConnection();
             preparedStatement = dbConnection.prepareStatement(selectSQL);
             preparedStatement.setLong(1, userId);
             preparedStatement.setLong(2, nowContractID);
@@ -78,6 +77,22 @@ public class Holder {
             if (dbConnection != null) {
                 dbConnection.close();
             }
+        }
+    }
+    public void initHolderTable(Long userId,Long futureId) throws SQLException {
+        ConnecetUtils connecetUtils = new ConnecetUtils();
+        Connection conn = JDBCStatementCreateExample.pds.getConnection();
+        try {
+            String selectUserSQL = "INSERT INTO HOLDER (USER_ID,FUTURE_ID,AMOUNT) VALUES (?,?,?)";
+            PreparedStatement ps = conn.prepareStatement(selectUserSQL);
+            ps.setLong(1, userId);
+            ps.setLong(2, futureId);
+            ps.setInt(3, 0);
+            ps.executeUpdate();
+            ps.close();
+            conn.close();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
         }
     }
 }

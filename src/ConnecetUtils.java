@@ -8,9 +8,9 @@ import java.sql.SQLException;
 public class ConnecetUtils {
     public static Connection getConn() {
         String driver = "oracle.jdbc.driver.OracleDriver";
-        String url = "jdbc:oracle:thin:@//10.60.42.202:1521/timespdb";// 设置连接字符串
-        String username = "C##TIMESTEN";// 用户名
-        String password = "googlecamp";// 密码
+        String url = "jdbc:oracle:thin:@10.60.42.203:1521:orcl";// 设置连接字符串
+        String username = "tthr";// 用户名
+        String password = "tthr";// 密码
         Connection conn = null; // 创建数据库连接对象
         try {
             Class.forName(driver);

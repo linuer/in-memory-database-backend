@@ -1,6 +1,10 @@
+import org.apache.commons.lang3.time.DateUtils;
+
 import java.sql.*;
 import java.sql.Date;
+import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -9,6 +13,34 @@ import java.util.*;
 public class FuturePrice {
     private java.sql.Date tradeTime;
     private Long futureID = (long) 3;
+
+    private java.util.Date sTime;
+    private java.util.Date endTime;
+    private java.util.Date nowTime;
+
+    public java.util.Date getsTime() {
+        return sTime;
+    }
+
+    public void setsTime(java.util.Date sTime) {
+        this.sTime = sTime;
+    }
+
+    public java.util.Date getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(java.util.Date endTime) {
+        this.endTime = endTime;
+    }
+
+    public java.util.Date getNowTime() {
+        return nowTime;
+    }
+
+    public void setNowTime(java.util.Date nowTime) {
+        this.nowTime = nowTime;
+    }
 
     public Long getFutureID() {
         return futureID;
@@ -68,43 +100,63 @@ public class FuturePrice {
     public void setFuturePrice(float futurePrice) {
         this.futurePrice = futurePrice;
     }
-
-    public void randPrice() {
-        float price = getDefaultPrice();
-        float num = (float) (Math.random());
-        if (increase == 0) {
-            increaseTimes();
+//
+//    public void randPrice() throws SQLException {
+//        float price = getDefaultPrice();
+//        float num = (float) (Math.random());
+//        if (increase == 0) {
+//            increaseTimes();
+//        }
+//        while (0 < increase) {
+//            increase--;
+//            price += (price * (num - 0.2) * 0.005);
+//            if (price < 0) {
+//                continue;
+//            }
+//            java.util.Date date1 = new java.util.Date();
+//            tradeTime = new java.sql.Date(date1.getTime());
+//            setFuturePrice(price);
+//            queryFuturePrice(tradeTime, futureID, futurePrice);
+//        }
+//        increaseTimes();
+//        while (0 < increase) {
+//            increase--;
+//            price += (price * (num - 0.8) * 0.005);
+//            if (price < 0) {
+//                continue;
+//            }
+//            java.util.Date date1 = new java.util.Date();
+//            tradeTime = new java.sql.Date(date1.getTime());
+//            System.out.println(price);
+//            setFuturePrice(price);
+//            queryFuturePrice(tradeTime, futureID, futurePrice);
+//        }
+//    }
+public void generateTime(java.util.Date startTime, java.util.Date endTime) throws SQLException, ParseException {
+    while (startTime.getTime() <= endTime.getTime()) {
+        nowTime = startTime;
+        nowTime = DateUtils.addHours(nowTime, 10);
+        java.util.Date nowDayEndTime = DateUtils.addHours(nowTime, 4);
+        while (nowTime.getTime() <= nowDayEndTime.getTime()) {
+            randPrice(nowTime);
+            nowTime = DateUtils.addMinutes(nowTime, 1);
         }
-        while (0 < increase) {
-            increase--;
-            price += (price * (num - 0.2) * 0.005);
-            if (price < 0) {
-                continue;
-            }
-            java.util.Date date1 = new java.util.Date();
-            tradeTime = new java.sql.Date(date1.getTime());
-            System.out.println(price);
-            setFuturePrice(price);
-            queryFuturePrice(tradeTime, futureID, futurePrice);
-        }
-        increaseTimes();
-        while (0 < increase) {
-            increase--;
-            price += (price * (num - 0.8) * 0.005);
-            if (price < 0) {
-                continue;
-            }
-            java.util.Date date1 = new java.util.Date();
-            tradeTime = new java.sql.Date(date1.getTime());
-            System.out.println(price);
-            setFuturePrice(price);
-            queryFuturePrice(tradeTime, futureID, futurePrice);
-        }
+        startTime = DateUtils.addDays(startTime, 1);
     }
+}
 
+    public void randPrice(java.util.Date date) throws SQLException, ParseException {
+        float num = (float) (Math.random());
+        float price = getDefaultPrice();
+        //价格曲线开始开始时间
+        tradeTime = new java.sql.Date(date.getTime());
+        setFuturePrice(price);
+        futurePrice += (futurePrice * (num - 0.5) * 0.01);
+        queryFuturePrice(tradeTime, futureID, futurePrice);
+    }
     private int increaseTimes() {
         Random r = new Random();
-        increase = r.nextInt(25);
+        increase = r.nextInt(2);
         return increase;
     }
 
@@ -122,9 +174,9 @@ public class FuturePrice {
     }
 
     //访问数据库并且把价格写入进去
-    private void queryFuturePrice(java.sql.Date tradeTime, Long futureID, float futurePrice) {
-        ConnecetUtils connecetUtils = new ConnecetUtils();
-        Connection conn = ConnecetUtils.getConn();
+    private void queryFuturePrice(java.sql.Date tradeTime, Long futureID, float futurePrice) throws SQLException {
+        Connection conn = JDBCStatementCreateExample.pds.getConnection();
+//        Connection conn = ConnecetUtils.getConn();
         try {
             String sql = "INSERT INTO FUTURE_PRICE(TRADE_TIME, FUTURE_ID,FUTURE_PRICE) VALUES (?, ?, ?)";
             PreparedStatement ps = conn.prepareStatement(sql);

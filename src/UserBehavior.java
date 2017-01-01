@@ -18,7 +18,7 @@ public class UserBehavior {
         User user = getUser(userId);
         Random r1 = new Random();
         //不同期货尝试交易的次数
-        int tradeTryTimes = 1 + (int) (r1.nextFloat() * 12);
+        int tradeTryTimes = 1 + (int) (r1.nextFloat() * 3);
         for (int i = 0; i != tradeTryTimes; i++) {
             //从数据库中随机获取几个FuturePrice内容
             Random r2 = new Random();
@@ -26,9 +26,8 @@ public class UserBehavior {
             int id = 3 + (int) (r2.nextFloat() * maxFutureNum);
             //交易时间
             Random r3 = new Random();
-            int times = 1 + (int) (r3.nextFloat() * 40);
+            int times = 1 + (int) (r3.nextFloat() * 5);
             ArrayList<Time_Price> time_prices = selectRecordsFromTable((long) id, times);
-            int counter = 0;
             //对于查询到的某一期货的list
             for (int j = 0; j != time_prices.size(); j++) {
                 Time_Price time_price = time_prices.get(j);
@@ -46,14 +45,6 @@ public class UserBehavior {
                 Random r5 = new Random();
                 //之前的数量
                 Holder holder = new Holder(userId, time_price.getContractID());
-                boolean flag = false;
-                if (holder.getAmount() == 0 && counter == 0) {
-                    //INSERT
-                    flag = true;
-                } else {
-                    flag = false;
-                }
-                counter += 1;
                 //只有当买/卖成功的时候，才更新holder里面的数值
                 //用户原来持有的amount
                 int oldAmount = holder.getAmount();
@@ -88,22 +79,16 @@ public class UserBehavior {
                 }
                 //写回数据库
                 saveTradeRecord(tradeRecord);
-                if (!flag) {
-                    updateHolderTabel(holder);
-                    flag = true;
-                } else {
-                    insertHolderTabel(holder);
-                    flag = false;
-                }
+                updateHolderTabel(holder);
                 updateUserTabel(user);
             }
         }
     }
 
     //Holder表更新
-    private void updateHolderTabel(Holder holder) {
+    private void updateHolderTabel(Holder holder) throws SQLException {
         ConnecetUtils connecetUtils = new ConnecetUtils();
-        Connection conn = ConnecetUtils.getConn();
+        Connection conn = JDBCStatementCreateExample.pds.getConnection();
         try {
             String updateTableSQL = "UPDATE  HOLDER SET AMOUNT = ? "
                     + " WHERE USER_ID = ? AND FUTURE_ID = ?";
@@ -138,9 +123,9 @@ public class UserBehavior {
     }
 
     //User表更新
-    private void updateUserTabel(User user) {
+    private void updateUserTabel(User user) throws SQLException {
         ConnecetUtils connecetUtils = new ConnecetUtils();
-        Connection conn = ConnecetUtils.getConn();
+        Connection conn = JDBCStatementCreateExample.pds.getConnection();
         try {
             String updateTableSQL = "UPDATE USER_TABLE SET FUND = ? "
                     + " WHERE USER_ID = ?";
@@ -155,9 +140,9 @@ public class UserBehavior {
         }
     }
 
-    private void saveTradeRecord(TradeRecord tradeRecord) {
+    private void saveTradeRecord(TradeRecord tradeRecord) throws SQLException {
         ConnecetUtils connecetUtils = new ConnecetUtils();
-        Connection conn = ConnecetUtils.getConn();
+        Connection conn = JDBCStatementCreateExample.pds.getConnection();
         try {
             String sql = "INSERT INTO TRADE_RECORD(USER_ID, FUTURE_ID,PRICE,TRADESTATE,TRADE_TYPE,AMOUNT,TRADE_TIME) VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = conn.prepareStatement(sql);

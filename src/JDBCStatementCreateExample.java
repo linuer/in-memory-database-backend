@@ -1,40 +1,65 @@
 
 import java.sql.*;
+import java.sql.Date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Random;
+import java.util.*;
+
+import oracle.ucp.jdbc.PoolDataSourceFactory;
+import oracle.ucp.jdbc.PoolDataSource;
 
 public class JDBCStatementCreateExample {
 
     private static final String DB_DRIVER = "oracle.jdbc.driver.OracleDriver";
-    private static final String DB_CONNECTION = "jdbc:oracle:thin:@//10.60.42.202:1521/timespdb";
-    private static final String DB_USER = "C##TIMESTEN";
-    private static final String DB_PASSWORD = "googlecamp";
+    private static final String DB_CONNECTION = "jdbc:oracle:thin:@10.60.42.203:1521:orcl";
+    private static final String DB_USER = "tthr";
+    private static final String DB_PASSWORD = "tthr";
     private static final DateFormat dateFormat = new SimpleDateFormat(
             "yyyy/MM/dd HH:mm:ss");
+    public static PoolDataSource pds = null;
+
 
     public static void main(String[] argv) throws ParseException, SQLException {
 //        dropTable();
+        pds = PoolDataSourceFactory.getPoolDataSource();
+        pds.setConnectionFactoryClassName("oracle.jdbc.pool.OracleDataSource");
+        pds.setURL(DB_CONNECTION);
+        pds.setUser(DB_USER);
+        pds.setPassword(DB_PASSWORD);
+        //Setting pool properties
+        pds.setInitialPoolSize(5);
+        pds.setMinPoolSize(5);
+        pds.setMaxPoolSize(500);
+
 //        createUserTable();
 //        createFutureContractTable();
 //        createTradeRecordTable();
+//        createFUTURE_PRICETable();
+//        createHolderTable();
 //        createHolderTable();
 //        createFUTURE_PRICETable();
-//        for (int i = 3; i != 100; i++) {
-//            FuturePriceThread futurePriceThread = new FuturePriceThread((long) i);
-//            futurePriceThread.start();
+//        for (int i = 1; i !=101 ; i++) {
+            FuturePriceThread futurePriceThread = new FuturePriceThread((long) 1);
+            futurePriceThread.start();
 //        }
-//        for (int i = 0; i != 1000; i++) {
+//        for (int i = 0; i != 600; i++) {
 //            User user =new User();
 //            user.generateAll();
 //            insertUser(user);
 //        }
-        UserBehavior userBehavior = new UserBehavior();
-        userBehavior.setMaxFutureNum(94);
-        Random random = new Random();
-        Long userId = (long) random.nextInt(1000);
-        userBehavior.trade(userId);
+//        for (long j = 1; j != 4440; j+=40) {
+//            UserBehaviorTheard userBehaviorTheard =new UserBehaviorTheard((long)j);
+//            userBehaviorTheard.start();
+//        }
+
+//        for (long i = 1; i != 111; i++) {
+//            HolderThread holderThread = new HolderThread((long)1);
+//            holderThread.start();
+//        }
+//        System.out.println("finish init!");
+//            FutureContract futureContract = new FutureContract();
+//            insertFutureContract(futureContract);
     }
 
 
@@ -154,6 +179,7 @@ public class JDBCStatementCreateExample {
             ps.setString(4, user.getTelphone());
             ps.setString(5, user.getPwd());
             ps.setFloat(6, user.getFund());
+
             ps.executeUpdate();
             ps.close();
             conn.close();
@@ -188,7 +214,7 @@ public class JDBCStatementCreateExample {
         Connection dbConnection = null;
         Statement statement = null;
         String createTableSQL = "CREATE TABLE TRADE_RECORD("
-                + "record_ID  NUMBER(20) GENERATED ALWAYS AS IDENTITY,"
+                + "record_ID  NUMBER(20),"
                 + "USER_ID  NUMBER(20),"
                 + "FUTURE_ID NUMBER(20), "
                 + "PRICE NUMBER(10),"
@@ -223,7 +249,7 @@ public class JDBCStatementCreateExample {
         Connection dbConnection = null;
         Statement statement = null;
         String createTableSQL = "CREATE TABLE USER_TABLE("
-                + "USER_ID  NUMBER(20) GENERATED ALWAYS AS IDENTITY,"
+                + "USER_ID  NUMBER(20),"
                 + "USER_NAME VARCHAR(20), "
                 + "USER_IDENTITY CHAR(18),"
                 + "GENDER CHAR(8),"
@@ -254,7 +280,7 @@ public class JDBCStatementCreateExample {
         Connection dbConnection = null;
         Statement statement = null;
         String createTableSQL = "CREATE TABLE FUTURE_CONTRACT("
-                + "FUTURE_ID  NUMBER(20) GENERATED ALWAYS AS IDENTITY,"
+                + "FUTURE_ID  NUMBER(20),"
                 + "CONTRACT_NAME VARCHAR2(20), "
                 + "DELIVERY_STATE NUMBER(2),"
                 + "CONTRACT DATE,"
@@ -291,7 +317,7 @@ public class JDBCStatementCreateExample {
                 + "FOREIGN KEY (FUTURE_ID) REFERENCES FUTURE_CONTRACT "
                 + ")";
         try {
-            dbConnection = getDBConnection();
+            dbConnection = pds.getConnection();
             statement = dbConnection.createStatement();
             System.out.println(createTableSQL);
             // execute the SQL stetement
