@@ -2,19 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="900d6ca3-0d3f-46ab-b636-d7c9904aa2b3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DBConnectionManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HelloWorld.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HolderThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UcpConnection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UserBehaviorTheard.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DatabaseConnection.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PerSecond.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UserThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ConnecetUtils.java" afterPath="$PROJECT_DIR$/src/ConnecetUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FutureContract.java" afterPath="$PROJECT_DIR$/src/FutureContract.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FuturePrice.java" afterPath="$PROJECT_DIR$/src/FuturePrice.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FuturePriceThread.java" afterPath="$PROJECT_DIR$/src/FuturePriceThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Holder.java" afterPath="$PROJECT_DIR$/src/Holder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HolderThread.java" afterPath="$PROJECT_DIR$/src/HolderThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JDBCStatementCreateExample.java" afterPath="$PROJECT_DIR$/src/JDBCStatementCreateExample.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBehavior.java" afterPath="$PROJECT_DIR$/src/UserBehavior.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBehaviorTheard.java" afterPath="$PROJECT_DIR$/src/UserBehaviorTheard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timeten.iml" afterPath="$PROJECT_DIR$/timeten.iml" />
     </list>
     <ignored path="timeten.iws" />
@@ -47,23 +46,104 @@
     <favorites_list name="timeten" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file leaf-file-name="JDBCStatementCreateExample.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+            <state relative-caret-position="2607">
+              <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
               <folding>
-                <marker date="1483270190920" expanded="true" signature="2475:2773" ph="CREATE TABLE... FUTURE_PRICE" />
-                <marker date="1483270190920" expanded="true" signature="3719:3945" ph="INSERT INTO DBUSER... " />
-                <marker date="1483270190920" expanded="true" signature="5377:5460" ph="INSERT INTO FUTURE_CONTRACT... " />
-                <marker date="1483270190920" expanded="true" signature="6062:6167" ph="INSERT INTO USER_TABLE... " />
-                <marker date="1483270190920" expanded="true" signature="7144:7170" ph="DROP TABLE F... " />
-                <marker date="1483270190920" expanded="true" signature="7548:8105" ph="CREATE TABLE... TRADE_RECORD" />
-                <marker date="1483270190920" expanded="true" signature="8900:9277" ph="CREATE TABLE... USER_TABLE" />
-                <marker date="1483270190920" expanded="true" signature="10040:10242" ph="CREATE TABLE... FUTURE_CONTRACT" />
-                <marker date="1483270190920" expanded="true" signature="10040:10309" ph="CREATE TABLE... FUTURE_CONTRACT" />
-                <marker date="1483270190920" expanded="true" signature="11109:11465" ph="CREATE TABLE... HOLDER" />
+                <element signature="method#reportSQLExceptions#0;class#JDBCStatementCreateExample#0" expanded="false" />
+                <marker date="1483446269171" expanded="true" signature="3924:4222" ph="CREATE TABLE... FUTURE_PRICE" />
+                <marker date="1483446269171" expanded="true" signature="5181:5407" ph="INSERT INTO DBUSER... " />
+                <marker date="1483446269171" expanded="true" signature="6333:6416" ph="INSERT INTO FUTURE_CONTRACT... " />
+                <marker date="1483446269171" expanded="true" signature="7943:8049" ph="INSERT INTO USER_TABLE... " />
+                <marker date="1483446269171" expanded="true" signature="9094:9120" ph="DROP TABLE F... " />
+                <marker date="1483446269171" expanded="true" signature="9498:10055" ph="CREATE TABLE... TRADE_RECORD" />
+                <marker date="1483446269171" expanded="true" signature="10864:11241" ph="CREATE TABLE... USER_TABLE" />
+                <marker date="1483446269171" expanded="true" signature="12018:12220" ph="CREATE TABLE... FUTURE_CONTRACT" />
+                <marker date="1483446269171" expanded="true" signature="12018:12287" ph="CREATE TABLE... FUTURE_CONTRACT" />
+                <marker date="1483446269171" expanded="true" signature="13101:13457" ph="CREATE TABLE... HOLDER" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PerSecond.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PerSecond.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="759">
+              <caret line="30" column="53" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#191#192#0" expanded="true" />
+                <element signature="e#223#224#0" expanded="true" />
+                <element signature="e#252#253#0" expanded="true" />
+                <element signature="e#279#280#0" expanded="true" />
+                <element signature="e#317#318#0" expanded="true" />
+                <element signature="e#349#350#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PoolDataSource.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../ucp.jar!/oracle/ucp/jdbc/PoolDataSource.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3201">
+              <caret line="106" column="9" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HolderThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HolderThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="726">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserBehaviorTheard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UserBehaviorTheard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="627">
+              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UserThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnecetUtils.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ConnecetUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FuturePrice.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FuturePrice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="24" />
+              <folding>
+                <marker date="1483445865268" expanded="true" signature="4937:5014" ph="INSERT INTO FUTURE_PRICE... " />
               </folding>
             </state>
           </provider>
@@ -72,7 +152,7 @@
       <file leaf-file-name="FuturePriceThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FuturePriceThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
+            <state relative-caret-position="858">
               <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
               <folding>
                 <element signature="e#325#326#0" expanded="true" />
@@ -82,47 +162,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FuturePrice.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/FuturePrice.java">
+      <file leaf-file-name="UserBehavior.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UserBehavior.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="140" column="30" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
+            <state relative-caret-position="1188">
+              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
               <folding>
-                <marker date="1483196017396" expanded="true" signature="4858:4935" ph="INSERT INTO FUTURE_PRICE... " />
+                <marker date="1483435671663" expanded="true" signature="3547:3638" ph="UPDATE HOLDE... " />
+                <marker date="1483435671663" expanded="true" signature="4286:4346" ph="INSERT INTO HOLDER... " />
+                <marker date="1483435671663" expanded="true" signature="4986:5060" ph="UPDATE USER_... " />
+                <marker date="1483435671663" expanded="true" signature="5631:5750" ph="INSERT INTO TRADE_RECORD... " />
+                <marker date="1483435671663" expanded="true" signature="6941:6987" ph="SELECT * FRO... FUTURE_PRICE" />
+                <marker date="1483435671663" expanded="true" signature="8549:8591" ph="SELECT * FRO... USER_TABLE" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreparedStatementProxyFactory.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../ucp.jar!/oracle/ucp/jdbc/proxy/PreparedStatementProxyFactory.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FutureContract.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FutureContract.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <element signature="e#1143#1144#0" expanded="true" />
-                <element signature="e#1174#1175#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnecetUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ConnecetUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -157,16 +209,20 @@
         <option value="$PROJECT_DIR$/src/DBConnectionManager.java" />
         <option value="$PROJECT_DIR$/src/level1.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/src/Holder.java" />
-        <option value="$PROJECT_DIR$/src/HolderThread.java" />
-        <option value="$PROJECT_DIR$/src/UserBehavior.java" />
         <option value="$PROJECT_DIR$/src/UcpConnection.java" />
-        <option value="$PROJECT_DIR$/src/HelloWorld.java" />
-        <option value="$PROJECT_DIR$/src/FuturePrice.java" />
-        <option value="$PROJECT_DIR$/src/UserBehaviorTheard.java" />
-        <option value="$PROJECT_DIR$/src/ConnecetUtils.java" />
         <option value="$PROJECT_DIR$/src/FutureContract.java" />
+        <option value="$PROJECT_DIR$/src/HolderThread.java" />
+        <option value="$PROJECT_DIR$/src/UserBehaviorTheard.java" />
+        <option value="$PROJECT_DIR$/src/HelloWorld.java" />
+        <option value="$PROJECT_DIR$/src/DatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/Holder.java" />
+        <option value="$PROJECT_DIR$/src/ConnecetUtils.java" />
+        <option value="$PROJECT_DIR$/src/UserBehavior.java" />
+        <option value="$PROJECT_DIR$/src/UserThread.java" />
         <option value="$PROJECT_DIR$/src/FuturePriceThread.java" />
+        <option value="$PROJECT_DIR$/src/PerSec.java" />
+        <option value="$PROJECT_DIR$/src/FuturePrice.java" />
+        <option value="$PROJECT_DIR$/src/PerSecond.java" />
         <option value="$PROJECT_DIR$/src/JDBCStatementCreateExample.java" />
       </list>
     </option>
@@ -187,7 +243,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
-    <option name="width" value="1942" />
+    <option name="width" value="1934" />
     <option name="height" value="1042" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -237,6 +293,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -275,9 +334,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -289,7 +345,12 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="D:\NodeJS\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ojdbc6.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/javaclass/commons-lang3-3.5.jar!/" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.JDBCStatementCreateExample">
     <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -808,12 +869,19 @@
       <workItem from="1483177762275" duration="21000" />
       <workItem from="1483181695595" duration="168000" />
       <workItem from="1483193809116" duration="5497000" />
-      <workItem from="1483254687899" duration="10486000" />
+      <workItem from="1483254687899" duration="24872000" />
+      <workItem from="1483338075035" duration="17459000" />
+      <workItem from="1483374091184" duration="1794000" />
+      <workItem from="1483421272829" duration="44000" />
+      <workItem from="1483422039108" duration="7154000" />
+      <workItem from="1483429920949" duration="7306000" />
+      <workItem from="1483442215533" duration="3601000" />
+      <workItem from="1483447623721" duration="123000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142939000" />
+    <option name="totallyTimeSpent" value="194806000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -825,32 +893,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
+    <frame x="-11" y="-11" width="1934" height="1042" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27553445" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2743468" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2262419" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2597614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10205184" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26603326" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24584323" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -895,86 +963,38 @@
           <option name="timeStamp" value="157" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UserBehavior.java</url>
-          <line>143</line>
-          <properties />
-          <option name="timeStamp" value="168" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UserBehavior.java</url>
-          <line>147</line>
-          <properties />
-          <option name="timeStamp" value="169" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UserBehavior.java</url>
-          <line>80</line>
-          <properties />
-          <option name="timeStamp" value="170" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UserBehavior.java</url>
-          <line>179</line>
-          <properties />
-          <option name="timeStamp" value="180" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/UserBehavior.java</url>
-          <line>217</line>
-          <properties />
-          <option name="timeStamp" value="181" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Holder.java</url>
-          <line>20</line>
-          <properties />
-          <option name="timeStamp" value="183" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Holder.java</url>
-          <line>19</line>
-          <properties />
-          <option name="timeStamp" value="184" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/HelloWorld.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="189" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java</url>
-          <line>296</line>
+          <line>333</line>
           <properties />
           <option name="timeStamp" value="215" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java</url>
-          <line>174</line>
+          <line>211</line>
           <properties />
           <option name="timeStamp" value="218" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java</url>
-          <line>176</line>
+          <line>213</line>
           <properties />
           <option name="timeStamp" value="219" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java</url>
-          <line>178</line>
+          <line>215</line>
           <properties />
           <option name="timeStamp" value="220" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java</url>
-          <line>179</line>
+          <line>216</line>
           <properties />
           <option name="timeStamp" value="221" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java</url>
-          <line>182</line>
+          <line>219</line>
           <properties />
           <option name="timeStamp" value="222" />
         </line-breakpoint>
@@ -1021,25 +1041,25 @@
           <option name="timeStamp" value="230" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/FuturePriceThread.java</url>
-          <line>32</line>
+          <url>file://$PROJECT_DIR$/src/UserBehavior.java</url>
+          <line>207</line>
           <properties />
-          <option name="timeStamp" value="231" />
+          <option name="timeStamp" value="259" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/FuturePrice.java</url>
-          <line>137</line>
+          <url>file://$PROJECT_DIR$/src/User.java</url>
+          <line>91</line>
           <properties />
-          <option name="timeStamp" value="233" />
+          <option name="timeStamp" value="274" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/FuturePrice.java</url>
-          <line>140</line>
+          <url>file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java</url>
+          <line>208</line>
           <properties />
-          <option name="timeStamp" value="239" />
+          <option name="timeStamp" value="275" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="240" />
+      <option name="time" value="276" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1056,55 +1076,72 @@
     <option name="FILTER_TARGETS" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ConnecetUtils.java">
+    <entry file="jar://$PROJECT_DIR$/../ucp.jar!/oracle/ucp/jdbc/PoolDataSource.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        <state relative-caret-position="6303">
+          <caret line="200" column="9" selection-start-line="200" selection-start-column="9" selection-end-line="200" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FutureContract.java">
+    <entry file="file://$PROJECT_DIR$/src/Holder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="462">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="e#1143#1144#0" expanded="true" />
-            <element signature="e#1174#1175#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#337#338#0" expanded="false" />
+            <element signature="e#366#367#0" expanded="false" />
+            <element signature="e#793#794#0" expanded="false" />
+            <element signature="e#829#830#0" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+            <element signature="e#959#960#0" expanded="false" />
+            <element signature="e#1009#1010#0" expanded="false" />
+            <element signature="e#1039#1040#0" expanded="false" />
+            <element signature="e#1068#1069#0" expanded="false" />
+            <element signature="e#1109#1110#0" expanded="false" />
+            <element signature="e#1145#1146#0" expanded="false" />
+            <marker date="1483434364646" expanded="true" signature="1392:1448" ph="SELECT * FRO... HOLDER" />
+            <marker date="1483434364646" expanded="true" signature="2568:2628" ph="INSERT INTO HOLDER... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java">
+    <entry file="file://$PROJECT_DIR$/src/HolderThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+        <state relative-caret-position="561">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1881">
+          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
           <folding>
-            <marker date="1483270190920" expanded="true" signature="2475:2773" ph="CREATE TABLE... FUTURE_PRICE" />
-            <marker date="1483270190920" expanded="true" signature="3719:3945" ph="INSERT INTO DBUSER... " />
-            <marker date="1483270190920" expanded="true" signature="5377:5460" ph="INSERT INTO FUTURE_CONTRACT... " />
-            <marker date="1483270190920" expanded="true" signature="6062:6167" ph="INSERT INTO USER_TABLE... " />
-            <marker date="1483270190920" expanded="true" signature="7144:7170" ph="DROP TABLE F... " />
-            <marker date="1483270190920" expanded="true" signature="7548:8105" ph="CREATE TABLE... TRADE_RECORD" />
-            <marker date="1483270190920" expanded="true" signature="8900:9277" ph="CREATE TABLE... USER_TABLE" />
-            <marker date="1483270190920" expanded="true" signature="10040:10242" ph="CREATE TABLE... FUTURE_CONTRACT" />
-            <marker date="1483270190920" expanded="true" signature="10040:10309" ph="CREATE TABLE... FUTURE_CONTRACT" />
-            <marker date="1483270190920" expanded="true" signature="11109:11465" ph="CREATE TABLE... HOLDER" />
+            <marker date="1483435671663" expanded="true" signature="3547:3638" ph="UPDATE HOLDE... " />
+            <marker date="1483435671663" expanded="true" signature="4286:4346" ph="INSERT INTO HOLDER... " />
+            <marker date="1483435671663" expanded="true" signature="4986:5060" ph="UPDATE USER_... " />
+            <marker date="1483435671663" expanded="true" signature="5631:5750" ph="INSERT INTO TRADE_RECORD... " />
+            <marker date="1483435671663" expanded="true" signature="6941:6987" ph="SELECT * FRO... FUTURE_PRICE" />
+            <marker date="1483435671663" expanded="true" signature="8549:8591" ph="SELECT * FRO... USER_TABLE" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../ucp.jar!/oracle/ucp/jdbc/proxy/PreparedStatementProxyFactory.class">
+    <entry file="file://$PROJECT_DIR$/src/UserBehaviorTheard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="627">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FuturePriceThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
+        <state relative-caret-position="858">
           <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
           <folding>
             <element signature="e#325#326#0" expanded="true" />
@@ -1115,11 +1152,588 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FuturePrice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="140" column="30" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483196017396" expanded="true" signature="4858:4935" ph="INSERT INTO FUTURE_PRICE... " />
+            <marker date="1483445865268" expanded="true" signature="4937:5014" ph="INSERT INTO FUTURE_PRICE... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../ucp.jar!/oracle/ucp/jdbc/proxy/PreparedStatementProxyFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FutureContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#576#577#0" expanded="false" />
+            <element signature="e#609#610#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#740#741#0" expanded="false" />
+            <element signature="e#788#789#0" expanded="false" />
+            <element signature="e#826#827#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
+            <element signature="e#917#918#0" expanded="false" />
+            <element signature="e#967#968#0" expanded="false" />
+            <element signature="e#1001#1002#0" expanded="false" />
+            <element signature="e#1030#1031#0" expanded="false" />
+            <element signature="e#1074#1075#0" expanded="false" />
+            <element signature="e#1110#1111#0" expanded="false" />
+            <element signature="e#1143#1144#0" expanded="false" />
+            <element signature="e#1174#1175#0" expanded="false" />
+            <element signature="e#1220#1221#0" expanded="false" />
+            <element signature="e#1260#1261#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#reportSQLExceptions#0;class#JDBCStatementCreateExample#0" expanded="false" />
+            <marker date="1483446269171" expanded="true" signature="3924:4222" ph="CREATE TABLE... FUTURE_PRICE" />
+            <marker date="1483446269171" expanded="true" signature="5181:5407" ph="INSERT INTO DBUSER... " />
+            <marker date="1483446269171" expanded="true" signature="6333:6416" ph="INSERT INTO FUTURE_CONTRACT... " />
+            <marker date="1483446269171" expanded="true" signature="7943:8049" ph="INSERT INTO USER_TABLE... " />
+            <marker date="1483446269171" expanded="true" signature="9094:9120" ph="DROP TABLE F... " />
+            <marker date="1483446269171" expanded="true" signature="9498:10055" ph="CREATE TABLE... TRADE_RECORD" />
+            <marker date="1483446269171" expanded="true" signature="10864:11241" ph="CREATE TABLE... USER_TABLE" />
+            <marker date="1483446269171" expanded="true" signature="12018:12220" ph="CREATE TABLE... FUTURE_CONTRACT" />
+            <marker date="1483446269171" expanded="true" signature="12018:12287" ph="CREATE TABLE... FUTURE_CONTRACT" />
+            <marker date="1483446269171" expanded="true" signature="13101:13457" ph="CREATE TABLE... HOLDER" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../ucp.jar!/oracle/ucp/jdbc/PoolDataSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6303">
+          <caret line="200" column="9" selection-start-line="200" selection-start-column="9" selection-end-line="200" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Holder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#337#338#0" expanded="false" />
+            <element signature="e#366#367#0" expanded="false" />
+            <element signature="e#793#794#0" expanded="false" />
+            <element signature="e#829#830#0" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+            <element signature="e#959#960#0" expanded="false" />
+            <element signature="e#1009#1010#0" expanded="false" />
+            <element signature="e#1039#1040#0" expanded="false" />
+            <element signature="e#1068#1069#0" expanded="false" />
+            <element signature="e#1109#1110#0" expanded="false" />
+            <element signature="e#1145#1146#0" expanded="false" />
+            <marker date="1483434364646" expanded="true" signature="1392:1448" ph="SELECT * FRO... HOLDER" />
+            <marker date="1483434364646" expanded="true" signature="2568:2628" ph="INSERT INTO HOLDER... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HolderThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1881">
+          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+          <folding>
+            <marker date="1483435671663" expanded="true" signature="3547:3638" ph="UPDATE HOLDE... " />
+            <marker date="1483435671663" expanded="true" signature="4286:4346" ph="INSERT INTO HOLDER... " />
+            <marker date="1483435671663" expanded="true" signature="4986:5060" ph="UPDATE USER_... " />
+            <marker date="1483435671663" expanded="true" signature="5631:5750" ph="INSERT INTO TRADE_RECORD... " />
+            <marker date="1483435671663" expanded="true" signature="6941:6987" ph="SELECT * FRO... FUTURE_PRICE" />
+            <marker date="1483435671663" expanded="true" signature="8549:8591" ph="SELECT * FRO... USER_TABLE" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBehaviorTheard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FuturePriceThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+          <folding>
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FuturePrice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3366">
+          <caret line="141" column="20" selection-start-line="141" selection-start-column="20" selection-end-line="141" selection-end-column="20" />
+          <folding>
+            <marker date="1483445865268" expanded="true" signature="4937:5014" ph="INSERT INTO FUTURE_PRICE... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../ucp.jar!/oracle/ucp/jdbc/proxy/PreparedStatementProxyFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FutureContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#576#577#0" expanded="false" />
+            <element signature="e#609#610#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#740#741#0" expanded="false" />
+            <element signature="e#788#789#0" expanded="false" />
+            <element signature="e#826#827#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
+            <element signature="e#917#918#0" expanded="false" />
+            <element signature="e#967#968#0" expanded="false" />
+            <element signature="e#1001#1002#0" expanded="false" />
+            <element signature="e#1030#1031#0" expanded="false" />
+            <element signature="e#1074#1075#0" expanded="false" />
+            <element signature="e#1110#1111#0" expanded="false" />
+            <element signature="e#1143#1144#0" expanded="false" />
+            <element signature="e#1174#1175#0" expanded="false" />
+            <element signature="e#1220#1221#0" expanded="false" />
+            <element signature="e#1260#1261#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#reportSQLExceptions#0;class#JDBCStatementCreateExample#0" expanded="false" />
+            <marker date="1483446269171" expanded="true" signature="3924:4222" ph="CREATE TABLE... FUTURE_PRICE" />
+            <marker date="1483446269171" expanded="true" signature="5181:5407" ph="INSERT INTO DBUSER... " />
+            <marker date="1483446269171" expanded="true" signature="6333:6416" ph="INSERT INTO FUTURE_CONTRACT... " />
+            <marker date="1483446269171" expanded="true" signature="7943:8049" ph="INSERT INTO USER_TABLE... " />
+            <marker date="1483446269171" expanded="true" signature="9094:9120" ph="DROP TABLE F... " />
+            <marker date="1483446269171" expanded="true" signature="9498:10055" ph="CREATE TABLE... TRADE_RECORD" />
+            <marker date="1483446269171" expanded="true" signature="10864:11241" ph="CREATE TABLE... USER_TABLE" />
+            <marker date="1483446269171" expanded="true" signature="12018:12220" ph="CREATE TABLE... FUTURE_CONTRACT" />
+            <marker date="1483446269171" expanded="true" signature="12018:12287" ph="CREATE TABLE... FUTURE_CONTRACT" />
+            <marker date="1483446269171" expanded="true" signature="13101:13457" ph="CREATE TABLE... HOLDER" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../ucp.jar!/oracle/ucp/jdbc/PoolDataSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6303">
+          <caret line="200" column="9" selection-start-line="200" selection-start-column="9" selection-end-line="200" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Holder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2112">
+          <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#337#338#0" expanded="false" />
+            <element signature="e#366#367#0" expanded="false" />
+            <element signature="e#793#794#0" expanded="false" />
+            <element signature="e#829#830#0" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+            <element signature="e#959#960#0" expanded="false" />
+            <element signature="e#1009#1010#0" expanded="false" />
+            <element signature="e#1039#1040#0" expanded="false" />
+            <element signature="e#1068#1069#0" expanded="false" />
+            <element signature="e#1109#1110#0" expanded="false" />
+            <element signature="e#1145#1146#0" expanded="false" />
+            <marker date="1483434364646" expanded="true" signature="1392:1448" ph="SELECT * FRO... HOLDER" />
+            <marker date="1483434364646" expanded="true" signature="2568:2628" ph="INSERT INTO HOLDER... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HolderThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5775">
+          <caret line="182" column="57" selection-start-line="182" selection-start-column="57" selection-end-line="182" selection-end-column="57" />
+          <folding>
+            <marker date="1483435671663" expanded="true" signature="3547:3638" ph="UPDATE HOLDE... " />
+            <marker date="1483435671663" expanded="true" signature="4286:4346" ph="INSERT INTO HOLDER... " />
+            <marker date="1483435671663" expanded="true" signature="4986:5060" ph="UPDATE USER_... " />
+            <marker date="1483435671663" expanded="true" signature="5631:5750" ph="INSERT INTO TRADE_RECORD... " />
+            <marker date="1483435671663" expanded="true" signature="6941:6987" ph="SELECT * FRO... FUTURE_PRICE" />
+            <marker date="1483435671663" expanded="true" signature="8549:8591" ph="SELECT * FRO... USER_TABLE" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBehaviorTheard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FuturePriceThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding>
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FuturePrice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3399">
+          <caret line="142" column="9" selection-start-line="142" selection-start-column="9" selection-end-line="142" selection-end-column="9" />
+          <folding>
+            <marker date="1483445865268" expanded="true" signature="4937:5014" ph="INSERT INTO FUTURE_PRICE... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../ucp.jar!/oracle/ucp/jdbc/proxy/PreparedStatementProxyFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FutureContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#576#577#0" expanded="false" />
+            <element signature="e#609#610#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#740#741#0" expanded="false" />
+            <element signature="e#788#789#0" expanded="false" />
+            <element signature="e#826#827#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
+            <element signature="e#917#918#0" expanded="false" />
+            <element signature="e#967#968#0" expanded="false" />
+            <element signature="e#1001#1002#0" expanded="false" />
+            <element signature="e#1030#1031#0" expanded="false" />
+            <element signature="e#1074#1075#0" expanded="false" />
+            <element signature="e#1110#1111#0" expanded="false" />
+            <element signature="e#1143#1144#0" expanded="false" />
+            <element signature="e#1174#1175#0" expanded="false" />
+            <element signature="e#1220#1221#0" expanded="false" />
+            <element signature="e#1260#1261#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../ucp.jar!/oracle/ucp/jdbc/proxy/PreparedStatementProxyFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2046">
+          <caret line="62" column="5" selection-start-line="43" selection-start-column="4" selection-end-line="62" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/sql/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1947">
+          <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UnrepeatRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-592">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FutureContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#576#577#0" expanded="false" />
+            <element signature="e#609#610#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#740#741#0" expanded="false" />
+            <element signature="e#788#789#0" expanded="false" />
+            <element signature="e#826#827#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
+            <element signature="e#917#918#0" expanded="false" />
+            <element signature="e#967#968#0" expanded="false" />
+            <element signature="e#1001#1002#0" expanded="false" />
+            <element signature="e#1030#1031#0" expanded="false" />
+            <element signature="e#1074#1075#0" expanded="false" />
+            <element signature="e#1110#1111#0" expanded="false" />
+            <element signature="e#1143#1144#0" expanded="false" />
+            <element signature="e#1174#1175#0" expanded="false" />
+            <element signature="e#1220#1221#0" expanded="false" />
+            <element signature="e#1260#1261#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TradeRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#472#473#0" expanded="false" />
+            <element signature="e#501#502#0" expanded="false" />
+            <element signature="e#543#544#0" expanded="false" />
+            <element signature="e#579#580#0" expanded="false" />
+            <element signature="e#617#618#0" expanded="false" />
+            <element signature="e#653#654#0" expanded="false" />
+            <element signature="e#709#710#0" expanded="false" />
+            <element signature="e#759#760#0" expanded="false" />
+            <element signature="e#790#791#0" expanded="false" />
+            <element signature="e#818#819#0" expanded="false" />
+            <element signature="e#859#860#0" expanded="false" />
+            <element signature="e#893#894#0" expanded="false" />
+            <element signature="e#927#928#0" expanded="false" />
+            <element signature="e#960#961#0" expanded="false" />
+            <element signature="e#1009#1010#0" expanded="false" />
+            <element signature="e#1053#1054#0" expanded="false" />
+            <element signature="e#1081#1082#0" expanded="false" />
+            <element signature="e#1108#1109#0" expanded="false" />
+            <element signature="e#1145#1146#0" expanded="false" />
+            <element signature="e#1177#1178#0" expanded="false" />
+            <element signature="e#1207#1208#0" expanded="false" />
+            <element signature="e#1236#1237#0" expanded="false" />
+            <element signature="e#1383#1384#0" expanded="false" />
+            <element signature="e#1419#1420#0" expanded="false" />
+            <element signature="e#1448#1449#0" expanded="false" />
+            <element signature="e#1475#1476#0" expanded="false" />
+            <element signature="e#1513#1514#0" expanded="false" />
+            <element signature="e#1545#1546#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Holder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#337#338#0" expanded="false" />
+            <element signature="e#366#367#0" expanded="false" />
+            <element signature="e#793#794#0" expanded="false" />
+            <element signature="e#829#830#0" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+            <element signature="e#959#960#0" expanded="false" />
+            <element signature="e#1009#1010#0" expanded="false" />
+            <element signature="e#1039#1040#0" expanded="false" />
+            <element signature="e#1068#1069#0" expanded="false" />
+            <element signature="e#1109#1110#0" expanded="false" />
+            <element signature="e#1145#1146#0" expanded="false" />
+            <marker date="1483434364646" expanded="true" signature="1392:1448" ph="SELECT * FRO... HOLDER" />
+            <marker date="1483434364646" expanded="true" signature="2568:2628" ph="INSERT INTO HOLDER... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBehaviorTheard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <folding>
+            <marker date="1483435671663" expanded="true" signature="3547:3638" ph="UPDATE HOLDE... " />
+            <marker date="1483435671663" expanded="true" signature="4286:4346" ph="INSERT INTO HOLDER... " />
+            <marker date="1483435671663" expanded="true" signature="4986:5060" ph="UPDATE USER_... " />
+            <marker date="1483435671663" expanded="true" signature="5631:5750" ph="INSERT INTO TRADE_RECORD... " />
+            <marker date="1483435671663" expanded="true" signature="6941:6987" ph="SELECT * FRO... FUTURE_PRICE" />
+            <marker date="1483435671663" expanded="true" signature="8549:8591" ph="SELECT * FRO... USER_TABLE" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../ucp.jar!/oracle/ucp/jdbc/PoolDataSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3201">
+          <caret line="106" column="9" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PerSec.java" />
+    <entry file="file://$PROJECT_DIR$/src/HolderThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FuturePriceThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding>
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FuturePrice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <marker date="1483445865268" expanded="true" signature="4937:5014" ph="INSERT INTO FUTURE_PRICE... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PerSecond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="30" column="53" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#191#192#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JDBCStatementCreateExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2607">
+          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding>
+            <element signature="method#reportSQLExceptions#0;class#JDBCStatementCreateExample#0" expanded="false" />
+            <marker date="1483446269171" expanded="true" signature="3924:4222" ph="CREATE TABLE... FUTURE_PRICE" />
+            <marker date="1483446269171" expanded="true" signature="5181:5407" ph="INSERT INTO DBUSER... " />
+            <marker date="1483446269171" expanded="true" signature="6333:6416" ph="INSERT INTO FUTURE_CONTRACT... " />
+            <marker date="1483446269171" expanded="true" signature="7943:8049" ph="INSERT INTO USER_TABLE... " />
+            <marker date="1483446269171" expanded="true" signature="9094:9120" ph="DROP TABLE F... " />
+            <marker date="1483446269171" expanded="true" signature="9498:10055" ph="CREATE TABLE... TRADE_RECORD" />
+            <marker date="1483446269171" expanded="true" signature="10864:11241" ph="CREATE TABLE... USER_TABLE" />
+            <marker date="1483446269171" expanded="true" signature="12018:12220" ph="CREATE TABLE... FUTURE_CONTRACT" />
+            <marker date="1483446269171" expanded="true" signature="12018:12287" ph="CREATE TABLE... FUTURE_CONTRACT" />
+            <marker date="1483446269171" expanded="true" signature="13101:13457" ph="CREATE TABLE... HOLDER" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConnecetUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1132,7 +1746,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31800765" />
               </list>
             </option>
           </splitter-proportions>
@@ -1144,7 +1758,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31800765" />
               </list>
             </option>
           </splitter-proportions>
@@ -1156,7 +1770,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31800765" />
               </list>
             </option>
           </splitter-proportions>

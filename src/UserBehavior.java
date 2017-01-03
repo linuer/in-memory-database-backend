@@ -18,15 +18,15 @@ public class UserBehavior {
         User user = getUser(userId);
         Random r1 = new Random();
         //不同期货尝试交易的次数
-        int tradeTryTimes = 1 + (int) (r1.nextFloat() * 3);
+        int tradeTryTimes = 1 + (int) (r1.nextFloat() * 80);
         for (int i = 0; i != tradeTryTimes; i++) {
             //从数据库中随机获取几个FuturePrice内容
             Random r2 = new Random();
-            //id从3到maxFutureNum+3
-            int id = 3 + (int) (r2.nextFloat() * maxFutureNum);
+            //id从1到maxFutureNum+1
+            int id = 1 + (int) (r2.nextFloat() * maxFutureNum);
             //交易时间
             Random r3 = new Random();
-            int times = 1 + (int) (r3.nextFloat() * 5);
+            int times = 1 + (int) (r3.nextFloat() * 20);
             ArrayList<Time_Price> time_prices = selectRecordsFromTable((long) id, times);
             //对于查询到的某一期货的list
             for (int j = 0; j != time_prices.size(); j++) {
@@ -48,7 +48,8 @@ public class UserBehavior {
                 //只有当买/卖成功的时候，才更新holder里面的数值
                 //用户原来持有的amount
                 int oldAmount = holder.getAmount();
-                int amount = r5.nextInt(200);
+                int amount = r5.nextInt(40);
+                amount = (int) (amount * 0.2) + 1;
                 tradeRecord.setAmount(amount);
                 float fee = amount * price;
                 //买
@@ -88,7 +89,7 @@ public class UserBehavior {
     //Holder表更新
     private void updateHolderTabel(Holder holder) throws SQLException {
         ConnecetUtils connecetUtils = new ConnecetUtils();
-        Connection conn = JDBCStatementCreateExample.pds.getConnection();
+        Connection conn = ConnecetUtils.getDBConnection();
         try {
             String updateTableSQL = "UPDATE  HOLDER SET AMOUNT = ? "
                     + " WHERE USER_ID = ? AND FUTURE_ID = ?";
@@ -105,9 +106,9 @@ public class UserBehavior {
     }
 
     //Holder表插入
-    private void insertHolderTabel(Holder holder) {
+    private void insertHolderTabel(Holder holder) throws SQLException {
         ConnecetUtils connecetUtils = new ConnecetUtils();
-        Connection conn = ConnecetUtils.getConn();
+        Connection conn = ConnecetUtils.getDBConnection();
         try {
             String insertTableSQL = "INSERT INTO HOLDER (USER_ID,FUTURE_ID,AMOUNT) VALUES (?,?,?)";
             PreparedStatement ps = conn.prepareStatement(insertTableSQL);
@@ -125,7 +126,7 @@ public class UserBehavior {
     //User表更新
     private void updateUserTabel(User user) throws SQLException {
         ConnecetUtils connecetUtils = new ConnecetUtils();
-        Connection conn = JDBCStatementCreateExample.pds.getConnection();
+        Connection conn = ConnecetUtils.getDBConnection();
         try {
             String updateTableSQL = "UPDATE USER_TABLE SET FUND = ? "
                     + " WHERE USER_ID = ?";
@@ -142,7 +143,7 @@ public class UserBehavior {
 
     private void saveTradeRecord(TradeRecord tradeRecord) throws SQLException {
         ConnecetUtils connecetUtils = new ConnecetUtils();
-        Connection conn = JDBCStatementCreateExample.pds.getConnection();
+        Connection conn = ConnecetUtils.getDBConnection();
         try {
             String sql = "INSERT INTO TRADE_RECORD(USER_ID, FUTURE_ID,PRICE,TRADESTATE,TRADE_TYPE,AMOUNT,TRADE_TIME) VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -152,7 +153,7 @@ public class UserBehavior {
             ps.setInt(4, tradeRecord.getTradeState());
             ps.setInt(5, tradeRecord.getType());
             ps.setInt(6, tradeRecord.getAmount());
-            Date date = new java.sql.Date(tradeRecord.getTime().getTime());
+            Date date = new java.sql.Date((tradeRecord.getTime()).getTime());
             ps.setDate(7, date);
             ps.executeUpdate();
             ps.close();
@@ -183,7 +184,7 @@ public class UserBehavior {
         String selectSQL = "SELECT * FROM FUTURE_PRICE WHERE FUTURE_ID = ?";
         try {
             ConnecetUtils connecetUtils = new ConnecetUtils();
-            dbConnection = ConnecetUtils.getConn();
+            dbConnection = ConnecetUtils.getDBConnection();
             preparedStatement = dbConnection.prepareStatement(selectSQL);
             preparedStatement.setLong(1, id);
             // execute select SQL stetement
@@ -192,8 +193,6 @@ public class UserBehavior {
                 Date time = rs.getDate("TRADE_TIME");
                 Long futureID = rs.getLong("FUTURE_ID");
                 float futurePrice = rs.getFloat("FUTURE_PRICE");
-                System.out.println("TRADE_TIME : " + time.getTime());
-                System.out.println("FUTURE_ID : " + futureID);
                 System.out.println("FUTURE_PRICE : " + futurePrice);
                 Time_Price time_price = new Time_Price();
                 time_price.setPrice(futurePrice);
@@ -226,7 +225,7 @@ public class UserBehavior {
         User user = new User();
         try {
             ConnecetUtils connecetUtils = new ConnecetUtils();
-            dbConnection = ConnecetUtils.getConn();
+            dbConnection = ConnecetUtils.getDBConnection();
             preparedStatement = dbConnection.prepareStatement(selectSQL);
             preparedStatement.setLong(1, id);
             ResultSet rs = preparedStatement.executeQuery();

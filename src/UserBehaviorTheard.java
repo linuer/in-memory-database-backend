@@ -22,8 +22,8 @@ public class UserBehaviorTheard extends Thread {
         for (long i = userID; i != userID + 40; i++) {
                 try {
                     Random random = new Random();
-                    int num = random.nextInt(3);
-                    userBehavior.setMaxFutureNum(num);
+//                    int num = random.nextInt(200);
+                    userBehavior.setMaxFutureNum(199);
                     userBehavior.trade(i);
                 } catch (SQLException e) {
                     e.printStackTrace();

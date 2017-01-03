@@ -18,12 +18,12 @@ public class FuturePriceThread extends Thread {
     public void run() {
 //        DateFormat dateFormat1 = new SimpleDateFormat("yyyy-MM-dd HH");
         DateFormat dateFormat2 = new SimpleDateFormat("yyyy-MM-dd");
-        Integer year = 2016;
-        Integer month = 12;
-        Integer day = 1;
-        Integer day2 = 31;
+        Integer year = 2017;
+        Integer month = 1;
+        Integer day = 4;
+        Integer day2 = 4;
         Integer hour1 = 10;
-        Integer hour2 = 14;
+        Integer hour2 = 16;
         java.lang.String str = year.toString() + "-" + month.toString() + "-" + day.toString();
         java.lang.String str2 = year.toString() + "-" + month.toString() + "-" + day2.toString();
         FuturePrice futurePrice = new FuturePrice(futureId);

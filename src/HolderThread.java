@@ -21,19 +21,21 @@ public class HolderThread extends Thread {
     @Override
     public void run() {
         Holder holder = new Holder();
-        for (long i = userID; i != userID + 39; i++) {
-            for (long j = 3; j != 405; j++) {
+        for (long j = 1; j != 101; j++) {
+            try {
+                holder.initHolderTable(userID, j);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            if (j % 9 == 0) {
                 try {
-                    holder.initHolderTable(i, j);
-                } catch (SQLException e) {
+                    sleep(10000);
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
+
         }
-        try {
-            sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
     }
 }

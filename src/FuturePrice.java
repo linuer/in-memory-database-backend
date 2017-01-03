@@ -100,7 +100,8 @@ public class FuturePrice {
     public void setFuturePrice(float futurePrice) {
         this.futurePrice = futurePrice;
     }
-//
+
+    //
 //    public void randPrice() throws SQLException {
 //        float price = getDefaultPrice();
 //        float num = (float) (Math.random());
@@ -132,18 +133,18 @@ public class FuturePrice {
 //            queryFuturePrice(tradeTime, futureID, futurePrice);
 //        }
 //    }
-public void generateTime(java.util.Date startTime, java.util.Date endTime) throws SQLException, ParseException {
-    while (startTime.getTime() <= endTime.getTime()) {
-        nowTime = startTime;
-        nowTime = DateUtils.addHours(nowTime, 10);
-        java.util.Date nowDayEndTime = DateUtils.addHours(nowTime, 4);
-        while (nowTime.getTime() <= nowDayEndTime.getTime()) {
-            randPrice(nowTime);
-            nowTime = DateUtils.addMinutes(nowTime, 1);
+    public void generateTime(java.util.Date startTime, java.util.Date endTime) throws SQLException, ParseException {
+        while (startTime.getTime() <= endTime.getTime()) {
+            nowTime = startTime;
+            nowTime = DateUtils.addHours(nowTime, 10);
+            java.util.Date nowDayEndTime = DateUtils.addHours(nowTime, 4);
+            while (nowTime.getTime() <= nowDayEndTime.getTime()) {
+                randPrice(nowTime);
+                nowTime = DateUtils.addMinutes(nowTime, 1);
+            }
+            startTime = DateUtils.addDays(startTime, 1);
         }
-        startTime = DateUtils.addDays(startTime, 1);
     }
-}
 
     public void randPrice(java.util.Date date) throws SQLException, ParseException {
         float num = (float) (Math.random());
@@ -152,8 +153,11 @@ public void generateTime(java.util.Date startTime, java.util.Date endTime) throw
         tradeTime = new java.sql.Date(date.getTime());
         setFuturePrice(price);
         futurePrice += (futurePrice * (num - 0.5) * 0.01);
+        System.out.println(tradeTime);
         queryFuturePrice(tradeTime, futureID, futurePrice);
     }
+
+
     private int increaseTimes() {
         Random r = new Random();
         increase = r.nextInt(2);
@@ -175,7 +179,7 @@ public void generateTime(java.util.Date startTime, java.util.Date endTime) throw
 
     //访问数据库并且把价格写入进去
     private void queryFuturePrice(java.sql.Date tradeTime, Long futureID, float futurePrice) throws SQLException {
-        Connection conn = JDBCStatementCreateExample.pds.getConnection();
+        Connection conn = ConnecetUtils.getDBConnection();
 //        Connection conn = ConnecetUtils.getConn();
         try {
             String sql = "INSERT INTO FUTURE_PRICE(TRADE_TIME, FUTURE_ID,FUTURE_PRICE) VALUES (?, ?, ?)";
@@ -191,5 +195,13 @@ public void generateTime(java.util.Date startTime, java.util.Date endTime) throw
         }
     }
 
-
+    public void updatePer(Long f_id, java.util.Date time) throws SQLException {
+        float num = (float) (Math.random());
+        float price = getDefaultPrice();
+        tradeTime = new java.sql.Date(time.getTime());
+        setFuturePrice(price);
+        futurePrice += (futurePrice * (num - 0.5) * 0.1);
+        System.out.println(tradeTime);
+        queryFuturePrice(tradeTime, f_id, futurePrice);
+    }
 }
