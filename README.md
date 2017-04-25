@@ -1,2 +1,2 @@
-# -in-memory-database
+# in-memory-database backend
  in-memory-database
